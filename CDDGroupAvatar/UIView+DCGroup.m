@@ -11,8 +11,12 @@
 #import "DCAvatarManager.h"
 #import "DCAvatarHelper.h"
 #import "UIImage+DCAvatar.h"
+#if __has_include(<SDWebImage/SDWebImage.h>)
+#import <SDWebImage/SDWebImage.h>
+#else
+#import "SDWebImage.h"
+#endif
 
-#import <SDWebImage.h>
 
 
 @implementation UIView (DCGroup)

@@ -6,10 +6,14 @@
 //  Copyright © 2019 RocketsChen. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "DCAvatarConfig.h"
-#import <SDWebImage.h>
+
+#if __has_include(<SDWebImage/SDWebImage.h>)
+#import <SDWebImage/SDWebImage.h>
+#else
+#import "SDWebImage.h"
+#endif
 
 @interface DCAvatarManager : NSObject
 

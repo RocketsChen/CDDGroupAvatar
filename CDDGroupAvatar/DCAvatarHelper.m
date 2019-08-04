@@ -11,7 +11,11 @@
 #import "DCAvatarManager.h"
 #import "UIImage+DCAvatar.h"
 
-#import <SDWebImage.h>
+#if __has_include(<SDWebImage/SDWebImage.h>)
+#import <SDWebImage/SDWebImage.h>
+#else
+#import "SDWebImage.h"
+#endif
 #import <CommonCrypto/CommonDigest.h>
 
 @implementation DCAvatarHelper
