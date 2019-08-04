@@ -45,7 +45,8 @@
 
 clean操作：清除所有内存缓存和磁盘缓存
 
-![](http://ww2.sinaimg.cn/large/006tNc79gy1g5nkb2qnyqg30hs0b4e86.gif)
+
+![](http://ww4.sinaimg.cn/large/006tNc79ly1g5mlql5ti4j30ds0u416w.jpg)
 
 
 
