@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'CDDGroupAvatar'
-s.version      = '1.1.0'
+s.version      = '1.2.0'
 s.summary      = 'iOS 群头像 / Easy to use'
 
 s.description  = <<-DESC
@@ -11,7 +11,7 @@ s.homepage     = 'https://github.com/RocketsChen/CDDGroupAvatar'
 s.license      = 'MIT'  #开源协议
 s.authors      = {'RcoketsChen' => '1062749739@qq.com'}
 s.platform     = :ios, '8.0'
-s.source       = {:git => 'https://github.com/RocketsChen/CDDGroupAvatar.git', :tag => '1.1.0'}
+s.source       = {:git => 'https://github.com/RocketsChen/CDDGroupAvatar.git', :tag => '1.2.0'}
 s.source_files = "CDDGroupAvatar", "CDDGroupAvatar/*.{h,m}"
 s.requires_arc = true
 
