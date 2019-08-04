@@ -8,7 +8,7 @@
 
 #### 博客地址：
 
-[iOS 群头像框架 — CDDGroupAvatar](https://www.jianshu.com/writer#/notebooks/5403986/notes/51837851)
+[iOS 群头像框架 — CDDGroupAvatar](https://www.jianshu.com/p/f1acb0c0fb97)
 
 #### 安装：
 
@@ -42,8 +42,6 @@
 // Background
 [self.avaBgButton dc_setBackgroundImageAvatarWithGroupId:@"avaBgButton" Source:_groupNum4 forState:0];
 ```
-
-clean操作：清除所有内存缓存和磁盘缓存
 
 
 ![](http://ww4.sinaimg.cn/large/006tNc79ly1g5mlql5ti4j30ds0u416w.jpg)
