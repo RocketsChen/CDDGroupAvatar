@@ -10,6 +10,8 @@
 
 [iOS 群头像框架 — CDDGroupAvatar](https://www.jianshu.com/p/f1acb0c0fb97)
 
+[GIF演示](http://ww2.sinaimg.cn/large/006tNc79gy1g5nkb2qnyqg30hs0b4e86.gif)
+
 #### 安装：
 
 * CocoaPods
@@ -45,7 +47,6 @@
 
 
 ![](http://ww4.sinaimg.cn/large/006tNc79ly1g5mlql5ti4j30ds0u416w.jpg)
-
 
 
 #### 关于版本：
