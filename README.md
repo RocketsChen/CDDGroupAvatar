@@ -10,7 +10,7 @@
 
 [iOS 群头像框架 — CDDGroupAvatar](https://www.jianshu.com/p/f1acb0c0fb97)
 
-![GIF](https://github.com/RocketsChen/CDDGroupAvatar/CDDGroupAvatar.gif)
+![GIF](https://github.com/RocketsChen/CDDGroupAvatar/blob/master/CDDGroupAvatar.gif)
 
 #### 安装：
 
