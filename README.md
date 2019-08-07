@@ -1,7 +1,7 @@
 # CDDGroupAvatar
 
 
-[![CocoaPods](https://img.shields.io/cocoapods/v/CDDGroupAvatar.svg)](https://cocoapods.org/pods/YBImageBrowser)&nbsp;[![CocoaPods](https://img.shields.io/cocoapods/p/CDDGroupAvatar.svg)](https://github.com/indulgeIn/CDDGroupAvatar)&nbsp;
+[![CocoaPods](https://img.shields.io/cocoapods/v/CDDGroupAvatar.svg)](https://cocoapods.org/pods/CDDGroupAvatar)&nbsp;[![CocoaPods](https://img.shields.io/cocoapods/p/CDDGroupAvatar.svg)](https://github.com/indulgeIn/CDDGroupAvatar)&nbsp;
 
 #### 这框架的初衷是想使群头像的实现尽可能的能像`SDWebImage`加载一张图片那么简单
 
