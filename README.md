@@ -50,3 +50,7 @@
 #### 关于版本：
 目前仅有OC版本，暂无Swift
 
+
+#### Agreement
+
+* ` CDDGroupAvatar` licensed under the MIT license is used. Refer to [LICENSE](https://opensource.org/licenses/MIT) for more information.
