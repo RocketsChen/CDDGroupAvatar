@@ -14,25 +14,25 @@
 @implementation UIButton (DCGroup)
 
 
-- (void)dc_setImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource forState:(UIControlState)state
+- (void)dc_setImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray *)groupSource forState:(UIControlState)state
 {
     [self dc_setImageAvatarWithGroupId:groupId Source:groupSource forState:state itemPlaceholder:nil options:0 completed:nil];
 }
 
 
-- (void)dc_setImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource forState:(UIControlState)state completed:(GroupImageBlock)completedBlock
+- (void)dc_setImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray *)groupSource forState:(UIControlState)state completed:(GroupImageBlock)completedBlock
 {
     [self dc_setImageAvatarWithGroupId:groupId Source:groupSource forState:state itemPlaceholder:nil options:0 completed:completedBlock];
 }
 
 
-- (void)dc_setImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource forState:(UIControlState)state itemPlaceholder:(id)placeholder
+- (void)dc_setImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray *)groupSource forState:(UIControlState)state itemPlaceholder:(id)placeholder
 {
     [self dc_setImageAvatarWithGroupId:groupId Source:groupSource forState:state itemPlaceholder:placeholder options:0 completed:nil];
 }
 
 
-- (void)dc_setImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource forState:(UIControlState)state itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options completed:(GroupImageBlock)completedBlock
+- (void)dc_setImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray *)groupSource forState:(UIControlState)state itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options completed:(GroupImageBlock)completedBlock
 {
     @weakify(self);
     [self dc_setAvatarWithGroupId:groupId Source:groupSource itemPlaceholder:placeholder options:options setImageBlock:^(UIImage *setImage) {
@@ -45,27 +45,27 @@
 
 
 
-- (void)dc_setBackgroundImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource forState:(UIControlState)state
+- (void)dc_setBackgroundImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray *)groupSource forState:(UIControlState)state
 {
     
     [self dc_setBackgroundImageAvatarWithGroupId:groupId Source:groupSource forState:state itemPlaceholder:nil options:0 completed:nil];
 }
 
 
-- (void)dc_setBackgroundImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource forState:(UIControlState)state completed:(GroupImageBlock)completedBlock
+- (void)dc_setBackgroundImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray *)groupSource forState:(UIControlState)state completed:(GroupImageBlock)completedBlock
 {
     
     [self dc_setBackgroundImageAvatarWithGroupId:groupId Source:groupSource forState:state itemPlaceholder:nil options:0 completed:completedBlock];
 }
 
 
-- (void)dc_setBackgroundImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource forState:(UIControlState)state itemPlaceholder:(id)placeholder
+- (void)dc_setBackgroundImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray *)groupSource forState:(UIControlState)state itemPlaceholder:(id)placeholder
 {
     [self dc_setBackgroundImageAvatarWithGroupId:groupId Source:groupSource forState:state itemPlaceholder:placeholder options:0 completed:nil];
 }
 
 
-- (void)dc_setBackgroundImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource forState:(UIControlState)state itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options completed:(GroupImageBlock)completedBlock
+- (void)dc_setBackgroundImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray *)groupSource forState:(UIControlState)state itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options completed:(GroupImageBlock)completedBlock
 {
     @weakify(self);
     [self dc_setAvatarWithGroupId:groupId Source:groupSource itemPlaceholder:placeholder options:options setImageBlock:^(UIImage *setImage) {

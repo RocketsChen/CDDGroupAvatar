@@ -286,7 +286,7 @@
 
 
 
-+ (NSArray *)dc_fetchItemCacheArraySource:(NSArray <NSString *>*)groupSource
++ (NSArray *)dc_fetchItemCacheArraySource:(NSArray *)groupSource
 {
     UIImage *itemIamge;
     NSMutableArray *cacheArray = [NSMutableArray array];
@@ -301,7 +301,7 @@
 }
 
 
-+ (void)dc_fetchLoadImageSource:(NSArray <NSString *>*)groupSource cacheGroupImage:(UIImage *)groupImage itemPlaceholder:(id)placeholder completedBlock:(FetchImageBlock)completedBlock{
++ (void)dc_fetchLoadImageSource:(NSArray *)groupSource cacheGroupImage:(UIImage *)groupImage itemPlaceholder:(id)placeholder completedBlock:(FetchImageBlock)completedBlock{
     
     NSMutableArray *groupImages = [NSMutableArray arrayWithArray:groupSource];
     
@@ -315,23 +315,21 @@
         }
     };
     
-    
     [groupSource enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            @autoreleasepool {
-                UIImage *placeholderImage = [[DCAvatarManager sharedAvatar].placeholderImage dc_backItemPlaceholderImage:placeholder groupCount:groupSource.count groupIndex:idx];
-            
-                if (!groupImage) {
-                    placeholderSum++;
-                    [groupImages replaceObjectAtIndex:idx withObject:placeholderImage];
-                    if (placeholderSum == groupSource.count) {
-                        dispatch_main_async_safe(callCompletedBlock)
-                    }
+        @autoreleasepool {
+            UIImage *placeholderImage = [[DCAvatarManager sharedAvatar].placeholderImage dc_backItemPlaceholderImage:placeholder groupCount:groupSource.count groupIndex:idx];
+
+            if (!groupImage) {
+                placeholderSum++;
+                [groupImages replaceObjectAtIndex:idx withObject:placeholderImage];
+                if (placeholderSum == groupSource.count) {
+                    dispatch_main_async_safe(callCompletedBlock)
                 }
-                __block NSString *strImg = (NSString *)obj;
-                [[SDWebImageManager sharedManager] loadImageWithURL:[NSURL URLWithString:DCURLStr(strImg)] options:sdImageOptions progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
+            }
+            __block NSString *strImg = (NSString *)obj;
+            [[SDWebImageManager sharedManager] loadImageWithURL:[NSURL URLWithString:DCURLStr(strImg)] options:sdImageOptions progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
+                @autoreleasepool {
                     groupSum++;
-                    
                     if (error) {
                         image = placeholderImage;
                     }else{
@@ -341,14 +339,40 @@
                     if (groupSum == groupSource.count) {
                         dispatch_main_async_safe(callCompletedBlock)
                     }
-                }];
-            }
+                }
+            }];
+        }
+    }];
+}
+
+
+
++ (NSArray *)dc_synfetchLoadImageSource:(NSArray *)groupSource itemPlaceholder:(id)placeholder
+{
+    __block NSMutableArray *allItemImages;
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    [self dc_fetchLoadImageSource:groupSource cacheGroupImage:nil itemPlaceholder:placeholder completedBlock:^(NSArray<UIImage *> *unitImages, BOOL succeed) {
+        allItemImages = [NSMutableArray arrayWithArray:unitImages];
+        dispatch_semaphore_signal(semaphore);
+    }];
+
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    return allItemImages;
+}
+
+
++ (void)dc_asynfetchLoadImageSource:(NSArray *)groupSource itemPlaceholder:(id)placeholder completedBlock:(AsynFetchImageBlock)completedBlock
+{
+    [self dc_fetchLoadImageSource:groupSource cacheGroupImage:nil itemPlaceholder:placeholder completedBlock:^(NSArray<UIImage *> *unitImages, BOOL succeed) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completedBlock(unitImages);
         });
     }];
 }
 
 
-+ (NSArray *)dc_getTypefMaxCount:(NSArray <NSString *>*)groupSource avatarType:(DCGroupAvatarType)groupAvatarType
+
++ (NSArray *)dc_getTypefMaxCount:(NSArray *)groupSource avatarType:(DCGroupAvatarType)groupAvatarType
 {
     if (groupAvatarType == DCGroupAvatarWeChatType) {
         return [groupSource subarrayWithRange:NSMakeRange(0, MIN(groupSource.count, DCMaxWeChatCount))];

@@ -64,6 +64,10 @@
 
     [self setUpLoadData];
     
+    [self setUpGetAllItemAva];
+    
+
+
 }
 
 
@@ -85,6 +89,15 @@
         @strongify(self);
         [self setUpLoadData];
     }];
+}
+
+- (void)setUpGetAllItemAva
+{
+    NSArray *itemImages = [DCAvatarHelper dc_synfetchLoadImageSource:_groupNum8 itemPlaceholder:nil];
+    [DCAvatarHelper dc_asynfetchLoadImageSource:_groupNum9 itemPlaceholder:nil completedBlock:^(NSArray<UIImage *> *unitImages) {
+        
+    }];
+    NSLog(@"群内小头像数组%@",itemImages);
 }
 
 

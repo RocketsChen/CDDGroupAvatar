@@ -22,7 +22,7 @@
 @implementation UIView (DCGroup)
 
 
-- (void)dc_setAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
+- (void)dc_setAvatarWithGroupId:(NSString *)groupId Source:(NSArray *)groupSource itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
 {
     
     [self setUpAllTypeAvatarGroupId:groupId Source:groupSource itemPlaceholder:placeholder options:options setImageBlock:setImageBlock completed:^(NSString *groupId, UIImage *groupImage, NSArray<UIImage *> *itemImageArray, NSString *cacheId) {
@@ -33,7 +33,7 @@
 }
 
 
-- (void)setUpAllTypeAvatarGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
+- (void)setUpAllTypeAvatarGroupId:(NSString *)groupId Source:(NSArray *)groupSource itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
 {
     @weakify(self);
     __block DCGroupAvatarType avatarType = [DCAvatarManager sharedAvatar].groupAvatarType;
@@ -69,7 +69,7 @@
         return;
     }
     
-    [DCAvatarHelper dc_fetchLoadImageSource:groupSource cacheGroupImage:(UIImage *)groupImage itemPlaceholder:placeholder completedBlock:^(NSArray <UIImage *>*unitImages, BOOL succeed) {
+    [DCAvatarHelper dc_fetchLoadImageSource:groupSource cacheGroupImage:groupImage itemPlaceholder:placeholder completedBlock:^(NSArray <UIImage *>*unitImages, BOOL succeed) {
         @strongify(self);
         
         groupUnitImages = unitImages;

@@ -20,8 +20,9 @@ typedef void(^GroupImageParamsBlock)(void);
 
 typedef void(^FetchImageBlock)(NSArray <UIImage *>*unitImages, BOOL succeed);
 
-typedef void(^FetchImageParamsBlock)(void);
+typedef void(^AsynFetchImageBlock)(NSArray <UIImage *>*unitImages);
 
+typedef void(^FetchImageParamsBlock)(void);
 
 // static
 

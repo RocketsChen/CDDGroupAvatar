@@ -47,6 +47,36 @@
 [self.avaBgButton dc_setBackgroundImageAvatarWithGroupId:@"avaBgButton" Source:_groupNum4 forState:0];
 ```
 
+## 版本更新
+| version | note |
+| ------ | ------ | 
+| 1.1.0 | Start ~ 🤔| 
+| 1.2.0 | Add Methods；Fix Bug。| 
+| 1.3.0 | 支持ImageView和Button，初步完成框架。|
+| 1.4.0 | Add：同步获取所有小头像方法；Fix：弱化方法泛型导致crash。|
+
+
+#### 1.4.0：
+
+```
+/**
+ 批量加载群内部小头像（同步-M）
+ 
+ @param groupSource 群头像数据源数组
+ @param placeholder 占位图 例：@[@"p1",@"p2"] 或者 @[image1,image2] 权重大于 placeholderImage属性
+ */
+ // 批量加载群内部小头像（同步-M）
++ (NSArray *)dc_synfetchLoadImageSource:(NSArray *)groupSource itemPlaceholder:(id)placeholder;
+
+/**
+ 批量加载群内部小头像（异步-M）
+ 
+ @param groupSource 群头像数据源数组
+ @param placeholder 占位图 例：@[@"p1",@"p2"] 或者 @[image1,image2] 权重大于 placeholderImage属性
+ */
++ (void)dc_asynfetchLoadImageSource:(NSArray *)groupSource itemPlaceholder:(id)placeholder completedBlock:(AsynFetchImageBlock)completedBlock;
+```
+
 #### 关于版本：
 目前仅有OC版本，暂无Swift
 
@@ -54,3 +84,5 @@
 #### Agreement
 
 * ` CDDGroupAvatar` licensed under the MIT license is used. Refer to [LICENSE](https://opensource.org/licenses/MIT) for more information.
+
+
