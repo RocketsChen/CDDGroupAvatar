@@ -101,7 +101,12 @@ typedef NS_ENUM(NSUInteger, DCNumberOfGroupAvatarType) {
 
 #define DCURLStr(avaStr) ([avaStr containsString:@"www."]) ? avaStr : [NSString stringWithFormat:@"%@%@",[DCAvatarManager sharedAvatar].baseUrl,avaStr]
 
+
 #define DCCacheIdMD5(groupId,groupSource) [DCAvatarHelper dc_cacheMd5:[NSString stringWithFormat:@"id%@_num%zd_lastObj%@_distance%.f_bordWidth%.f_bgColor%@",groupId,groupSource.count,groupSource.lastObject,[DCAvatarManager sharedAvatar].distanceBetweenAvatar,[DCAvatarManager sharedAvatar].bordWidth,[DCAvatarHelper dc_hexColor:[DCAvatarManager sharedAvatar].avatarBgColor]]]
+
+
+#define DCNoCacheIdMD5(groupId,groupSource) [DCNoCacheAvatarHelper dc_cacheMd5:[NSString stringWithFormat:@"id%@_num%zd_lastObj%@_distance%.f_bordWidth%.f_bgColor%@",groupId,groupSource.count,groupSource.lastObject,[DCNoCahceAvatarManager sharedAvatar].distanceBetweenAvatar,[DCNoCahceAvatarManager sharedAvatar].bordWidth,[DCNoCacheAvatarHelper dc_hexColor:[DCNoCahceAvatarManager sharedAvatar].avatarBgColor]]]
+
 
 
 #ifndef dispatch_main_async_safe
@@ -113,34 +118,34 @@ dispatch_async(dispatch_get_main_queue(), block);\
 }
 #endif
 
-#ifndef weakify
+#ifndef ga_weakify
 #if DEBUG
 #if __has_feature(objc_arc)
-#define weakify(object) autoreleasepool{} __weak __typeof__(object) weak##_##object = object;
+#define ga_weakify(object) autoreleasepool{} __weak __typeof__(object) weak##_##object = object;
 #else
-#define weakify(object) autoreleasepool{} __block __typeof__(object) block##_##object = object;
+#define ga_weakify(object) autoreleasepool{} __block __typeof__(object) block##_##object = object;
 #endif
 #else
 #if __has_feature(objc_arc)
-#define weakify(object) try{} @finally{} {} __weak __typeof__(object) weak##_##object = object;
+#define ga_weakify(object) try{} @finally{} {} __weak __typeof__(object) weak##_##object = object;
 #else
-#define weakify(object) try{} @finally{} {} __block __typeof__(object) block##_##object = object;
+#define ga_weakify(object) try{} @finally{} {} __block __typeof__(object) block##_##object = object;
 #endif
 #endif
 #endif
 
-#ifndef strongify
+#ifndef ga_strongify
 #if DEBUG
 #if __has_feature(objc_arc)
-#define strongify(object) autoreleasepool{} __typeof__(object) object = weak##_##object;
+#define ga_strongify(object) autoreleasepool{} __typeof__(object) object = weak##_##object;
 #else
-#define strongify(object) autoreleasepool{} __typeof__(object) object = block##_##object;
+#define ga_strongify(object) autoreleasepool{} __typeof__(object) object = block##_##object;
 #endif
 #else
 #if __has_feature(objc_arc)
-#define strongify(object) try{} @finally{} __typeof__(object) object = weak##_##object;
+#define ga_strongify(object) try{} @finally{} __typeof__(object) object = weak##_##object;
 #else
-#define strongify(object) try{} @finally{} __typeof__(object) object = block##_##object;
+#define ga_strongify(object) try{} @finally{} __typeof__(object) object = block##_##object;
 #endif
 #endif
 #endif

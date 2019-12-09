@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DCAvatar.h"
+#import "DCNoCacheAvatar.h"
 #import <SDWebImage.h>
 
 #import <QuartzCore/QuartzCore.h>
@@ -59,15 +60,19 @@
     [super viewDidLoad];
 
     [self setUpNav];
+//
+//    [self setUpDataSource];
+//
+//    [self setUpLoadData];
+//
+//    [self setUpGetAllItemAva];
+//
 
-    [self setUpDataSource];
-
-    [self setUpLoadData];
     
-    [self setUpGetAllItemAva];
+    NSArray *noCacheImageArrary = @[[UIImage imageNamed:@"noCache1"],[UIImage imageNamed:@"noCache2"],[UIImage imageNamed:@"noCache3"],[UIImage imageNamed:@"noCache4"]];
+    [self.avImageViewW5 dc_setNoCacheImageAvatarWithGroupId:@"avImageViewW5" Source:noCacheImageArrary];
     
-
-
+    
 }
 
 
@@ -84,9 +89,9 @@
 
 - (void)clean
 {
-    @weakify(self);
+    @ga_weakify(self);
     [[SDImageCache sharedImageCache] clearWithCacheType:SDImageCacheTypeAll completion:^{
-        @strongify(self);
+        @ga_strongify(self);
         [self setUpLoadData];
     }];
 }

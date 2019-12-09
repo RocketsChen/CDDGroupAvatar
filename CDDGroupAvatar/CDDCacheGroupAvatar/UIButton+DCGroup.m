@@ -34,9 +34,9 @@
 
 - (void)dc_setImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray *)groupSource forState:(UIControlState)state itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options completed:(GroupImageBlock)completedBlock
 {
-    @weakify(self);
+    @ga_weakify(self);
     [self dc_setAvatarWithGroupId:groupId Source:groupSource itemPlaceholder:placeholder options:options setImageBlock:^(UIImage *setImage) {
-        @strongify(self);
+        @ga_strongify(self);
         [self setImage:setImage forState:state];
     } completed:completedBlock];
 }
@@ -67,9 +67,9 @@
 
 - (void)dc_setBackgroundImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray *)groupSource forState:(UIControlState)state itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options completed:(GroupImageBlock)completedBlock
 {
-    @weakify(self);
+    @ga_weakify(self);
     [self dc_setAvatarWithGroupId:groupId Source:groupSource itemPlaceholder:placeholder options:options setImageBlock:^(UIImage *setImage) {
-        @strongify(self);
+        @ga_strongify(self);
         [self setBackgroundImage:setImage forState:state];
     } completed:completedBlock];
 }

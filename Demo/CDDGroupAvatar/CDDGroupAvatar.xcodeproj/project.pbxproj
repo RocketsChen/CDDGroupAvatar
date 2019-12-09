@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C9A9E4422F6A52500FD286B /* UIButton+DCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A9E3722F6A52500FD286B /* UIButton+DCGroup.m */; };
-		9C9A9E4522F6A52500FD286B /* UIView+DCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A9E3822F6A52500FD286B /* UIView+DCGroup.m */; };
-		9C9A9E4622F6A52500FD286B /* DCAvatarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A9E3A22F6A52500FD286B /* DCAvatarHelper.m */; };
-		9C9A9E4722F6A52500FD286B /* UIImage+DCAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A9E3B22F6A52500FD286B /* UIImage+DCAvatar.m */; };
-		9C9A9E4822F6A52500FD286B /* UIImageView+DCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A9E3D22F6A52500FD286B /* UIImageView+DCGroup.m */; };
-		9C9A9E4922F6A52500FD286B /* DCAvatarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A9E4222F6A52500FD286B /* DCAvatarManager.m */; };
+		9C3287C4239EAB0700C2BAAB /* UIButton+DCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287AA239EAB0600C2BAAB /* UIButton+DCGroup.m */; };
+		9C3287C5239EAB0700C2BAAB /* UIView+DCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287AB239EAB0600C2BAAB /* UIView+DCGroup.m */; };
+		9C3287C6239EAB0700C2BAAB /* DCAvatarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287AD239EAB0600C2BAAB /* DCAvatarHelper.m */; };
+		9C3287C7239EAB0700C2BAAB /* UIImage+DCAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287AE239EAB0600C2BAAB /* UIImage+DCAvatar.m */; };
+		9C3287C8239EAB0700C2BAAB /* UIImageView+DCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287B0239EAB0600C2BAAB /* UIImageView+DCGroup.m */; };
+		9C3287C9239EAB0700C2BAAB /* DCAvatarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287B4239EAB0600C2BAAB /* DCAvatarManager.m */; };
+		9C3287CA239EAB0700C2BAAB /* DCNoCacheAvatarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287BA239EAB0600C2BAAB /* DCNoCacheAvatarHelper.m */; };
+		9C3287CB239EAB0700C2BAAB /* DCNoCahceAvatarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287BB239EAB0600C2BAAB /* DCNoCahceAvatarManager.m */; };
+		9C3287CC239EAB0700C2BAAB /* UIButton+DCNoCacheGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287BC239EAB0600C2BAAB /* UIButton+DCNoCacheGroup.m */; };
+		9C3287CD239EAB0700C2BAAB /* UIView+DCNoCacheGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287BD239EAB0600C2BAAB /* UIView+DCNoCacheGroup.m */; };
+		9C3287CE239EAB0700C2BAAB /* UIImageView+DCNoCacheGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287BE239EAB0600C2BAAB /* UIImageView+DCNoCacheGroup.m */; };
 		9CD65CE922ED7D1100E30751 /* DCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD65CE822ED7D1100E30751 /* DCTestViewController.m */; };
 		9CE7472C22E0CBAE00FA267A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE7472B22E0CBAE00FA267A /* AppDelegate.m */; };
 		9CE7472F22E0CBAE00FA267A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE7472E22E0CBAE00FA267A /* ViewController.m */; };
@@ -28,20 +33,31 @@
 		0E8A03F88A745EF038F74025 /* libPods-CDDGroupAvatar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CDDGroupAvatar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C64A9EBB51E58C12544E65 /* Pods-CDDGroupAvatar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDDGroupAvatar.release.xcconfig"; path = "Target Support Files/Pods-CDDGroupAvatar/Pods-CDDGroupAvatar.release.xcconfig"; sourceTree = "<group>"; };
 		6575D77F88B663C1CC5F42FF /* Pods-CDDGroupAvatar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDDGroupAvatar.debug.xcconfig"; path = "Target Support Files/Pods-CDDGroupAvatar/Pods-CDDGroupAvatar.debug.xcconfig"; sourceTree = "<group>"; };
-		9C9A9E3622F6A52500FD286B /* UIImageView+DCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+DCGroup.h"; sourceTree = "<group>"; };
-		9C9A9E3722F6A52500FD286B /* UIButton+DCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DCGroup.m"; sourceTree = "<group>"; };
-		9C9A9E3822F6A52500FD286B /* UIView+DCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DCGroup.m"; sourceTree = "<group>"; };
-		9C9A9E3922F6A52500FD286B /* DCAvatarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAvatarManager.h; sourceTree = "<group>"; };
-		9C9A9E3A22F6A52500FD286B /* DCAvatarHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAvatarHelper.m; sourceTree = "<group>"; };
-		9C9A9E3B22F6A52500FD286B /* UIImage+DCAvatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DCAvatar.m"; sourceTree = "<group>"; };
-		9C9A9E3C22F6A52500FD286B /* UIButton+DCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DCGroup.h"; sourceTree = "<group>"; };
-		9C9A9E3D22F6A52500FD286B /* UIImageView+DCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DCGroup.m"; sourceTree = "<group>"; };
-		9C9A9E3E22F6A52500FD286B /* UIView+DCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DCGroup.h"; sourceTree = "<group>"; };
-		9C9A9E3F22F6A52500FD286B /* DCAvatarConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAvatarConfig.h; sourceTree = "<group>"; };
-		9C9A9E4022F6A52500FD286B /* UIImage+DCAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DCAvatar.h"; sourceTree = "<group>"; };
-		9C9A9E4122F6A52500FD286B /* DCAvatarHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAvatarHelper.h; sourceTree = "<group>"; };
-		9C9A9E4222F6A52500FD286B /* DCAvatarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAvatarManager.m; sourceTree = "<group>"; };
-		9C9A9E4322F6A52500FD286B /* DCAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAvatar.h; sourceTree = "<group>"; };
+		9C3287A9239EAB0600C2BAAB /* UIImageView+DCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+DCGroup.h"; sourceTree = "<group>"; };
+		9C3287AA239EAB0600C2BAAB /* UIButton+DCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DCGroup.m"; sourceTree = "<group>"; };
+		9C3287AB239EAB0600C2BAAB /* UIView+DCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DCGroup.m"; sourceTree = "<group>"; };
+		9C3287AC239EAB0600C2BAAB /* DCAvatarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAvatarManager.h; sourceTree = "<group>"; };
+		9C3287AD239EAB0600C2BAAB /* DCAvatarHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAvatarHelper.m; sourceTree = "<group>"; };
+		9C3287AE239EAB0600C2BAAB /* UIImage+DCAvatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DCAvatar.m"; sourceTree = "<group>"; };
+		9C3287AF239EAB0600C2BAAB /* UIButton+DCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DCGroup.h"; sourceTree = "<group>"; };
+		9C3287B0239EAB0600C2BAAB /* UIImageView+DCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DCGroup.m"; sourceTree = "<group>"; };
+		9C3287B1239EAB0600C2BAAB /* UIView+DCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DCGroup.h"; sourceTree = "<group>"; };
+		9C3287B2239EAB0600C2BAAB /* UIImage+DCAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DCAvatar.h"; sourceTree = "<group>"; };
+		9C3287B3239EAB0600C2BAAB /* DCAvatarHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAvatarHelper.h; sourceTree = "<group>"; };
+		9C3287B4239EAB0600C2BAAB /* DCAvatarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAvatarManager.m; sourceTree = "<group>"; };
+		9C3287B5239EAB0600C2BAAB /* DCAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAvatar.h; sourceTree = "<group>"; };
+		9C3287B7239EAB0600C2BAAB /* UIView+DCNoCacheGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DCNoCacheGroup.h"; sourceTree = "<group>"; };
+		9C3287B8239EAB0600C2BAAB /* UIButton+DCNoCacheGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DCNoCacheGroup.h"; sourceTree = "<group>"; };
+		9C3287B9239EAB0600C2BAAB /* UIImageView+DCNoCacheGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+DCNoCacheGroup.h"; sourceTree = "<group>"; };
+		9C3287BA239EAB0600C2BAAB /* DCNoCacheAvatarHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNoCacheAvatarHelper.m; sourceTree = "<group>"; };
+		9C3287BB239EAB0600C2BAAB /* DCNoCahceAvatarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNoCahceAvatarManager.m; sourceTree = "<group>"; };
+		9C3287BC239EAB0600C2BAAB /* UIButton+DCNoCacheGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DCNoCacheGroup.m"; sourceTree = "<group>"; };
+		9C3287BD239EAB0600C2BAAB /* UIView+DCNoCacheGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DCNoCacheGroup.m"; sourceTree = "<group>"; };
+		9C3287BE239EAB0600C2BAAB /* UIImageView+DCNoCacheGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DCNoCacheGroup.m"; sourceTree = "<group>"; };
+		9C3287BF239EAB0600C2BAAB /* DCNoCahceAvatarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNoCahceAvatarManager.h; sourceTree = "<group>"; };
+		9C3287C0239EAB0600C2BAAB /* DCNoCacheAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNoCacheAvatar.h; sourceTree = "<group>"; };
+		9C3287C1239EAB0600C2BAAB /* DCNoCacheAvatarHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNoCacheAvatarHelper.h; sourceTree = "<group>"; };
+		9C3287C3239EAB0600C2BAAB /* DCAvatarConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAvatarConfig.h; sourceTree = "<group>"; };
 		9CD65CE722ED7D1100E30751 /* DCTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCTestViewController.h; sourceTree = "<group>"; };
 		9CD65CE822ED7D1100E30751 /* DCTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTestViewController.m; sourceTree = "<group>"; };
 		9CE7472722E0CBAE00FA267A /* CDDGroupAvatar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDDGroupAvatar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,26 +95,61 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		9C9A9E3522F6A52500FD286B /* CDDGroupAvatar */ = {
+		9C3287A7239EAB0600C2BAAB /* CDDGroupAvatar */ = {
 			isa = PBXGroup;
 			children = (
-				9C9A9E4322F6A52500FD286B /* DCAvatar.h */,
-				9C9A9E3F22F6A52500FD286B /* DCAvatarConfig.h */,
-				9C9A9E4122F6A52500FD286B /* DCAvatarHelper.h */,
-				9C9A9E3A22F6A52500FD286B /* DCAvatarHelper.m */,
-				9C9A9E3922F6A52500FD286B /* DCAvatarManager.h */,
-				9C9A9E4222F6A52500FD286B /* DCAvatarManager.m */,
-				9C9A9E3C22F6A52500FD286B /* UIButton+DCGroup.h */,
-				9C9A9E3722F6A52500FD286B /* UIButton+DCGroup.m */,
-				9C9A9E4022F6A52500FD286B /* UIImage+DCAvatar.h */,
-				9C9A9E3B22F6A52500FD286B /* UIImage+DCAvatar.m */,
-				9C9A9E3622F6A52500FD286B /* UIImageView+DCGroup.h */,
-				9C9A9E3D22F6A52500FD286B /* UIImageView+DCGroup.m */,
-				9C9A9E3E22F6A52500FD286B /* UIView+DCGroup.h */,
-				9C9A9E3822F6A52500FD286B /* UIView+DCGroup.m */,
+				9C3287A8239EAB0600C2BAAB /* CDDCacheGroupAvatar */,
+				9C3287B6239EAB0600C2BAAB /* CDDNoCacheGroupAvatar */,
+				9C3287C2239EAB0600C2BAAB /* DCAvatarConfig */,
 			);
 			name = CDDGroupAvatar;
 			path = ../../../CDDGroupAvatar;
+			sourceTree = "<group>";
+		};
+		9C3287A8239EAB0600C2BAAB /* CDDCacheGroupAvatar */ = {
+			isa = PBXGroup;
+			children = (
+				9C3287B5239EAB0600C2BAAB /* DCAvatar.h */,
+				9C3287B3239EAB0600C2BAAB /* DCAvatarHelper.h */,
+				9C3287AD239EAB0600C2BAAB /* DCAvatarHelper.m */,
+				9C3287AC239EAB0600C2BAAB /* DCAvatarManager.h */,
+				9C3287B4239EAB0600C2BAAB /* DCAvatarManager.m */,
+				9C3287AF239EAB0600C2BAAB /* UIButton+DCGroup.h */,
+				9C3287AA239EAB0600C2BAAB /* UIButton+DCGroup.m */,
+				9C3287B2239EAB0600C2BAAB /* UIImage+DCAvatar.h */,
+				9C3287AE239EAB0600C2BAAB /* UIImage+DCAvatar.m */,
+				9C3287A9239EAB0600C2BAAB /* UIImageView+DCGroup.h */,
+				9C3287B0239EAB0600C2BAAB /* UIImageView+DCGroup.m */,
+				9C3287B1239EAB0600C2BAAB /* UIView+DCGroup.h */,
+				9C3287AB239EAB0600C2BAAB /* UIView+DCGroup.m */,
+			);
+			path = CDDCacheGroupAvatar;
+			sourceTree = "<group>";
+		};
+		9C3287B6239EAB0600C2BAAB /* CDDNoCacheGroupAvatar */ = {
+			isa = PBXGroup;
+			children = (
+				9C3287C0239EAB0600C2BAAB /* DCNoCacheAvatar.h */,
+				9C3287C1239EAB0600C2BAAB /* DCNoCacheAvatarHelper.h */,
+				9C3287BA239EAB0600C2BAAB /* DCNoCacheAvatarHelper.m */,
+				9C3287BF239EAB0600C2BAAB /* DCNoCahceAvatarManager.h */,
+				9C3287BB239EAB0600C2BAAB /* DCNoCahceAvatarManager.m */,
+				9C3287B8239EAB0600C2BAAB /* UIButton+DCNoCacheGroup.h */,
+				9C3287BC239EAB0600C2BAAB /* UIButton+DCNoCacheGroup.m */,
+				9C3287B9239EAB0600C2BAAB /* UIImageView+DCNoCacheGroup.h */,
+				9C3287BE239EAB0600C2BAAB /* UIImageView+DCNoCacheGroup.m */,
+				9C3287B7239EAB0600C2BAAB /* UIView+DCNoCacheGroup.h */,
+				9C3287BD239EAB0600C2BAAB /* UIView+DCNoCacheGroup.m */,
+			);
+			path = CDDNoCacheGroupAvatar;
+			sourceTree = "<group>";
+		};
+		9C3287C2239EAB0600C2BAAB /* DCAvatarConfig */ = {
+			isa = PBXGroup;
+			children = (
+				9C3287C3239EAB0600C2BAAB /* DCAvatarConfig.h */,
+			);
+			path = DCAvatarConfig;
 			sourceTree = "<group>";
 		};
 		9CE7471E22E0CBAE00FA267A = {
@@ -122,7 +173,7 @@
 		9CE7472922E0CBAE00FA267A /* CDDGroupAvatar */ = {
 			isa = PBXGroup;
 			children = (
-				9C9A9E3522F6A52500FD286B /* CDDGroupAvatar */,
+				9C3287A7239EAB0600C2BAAB /* CDDGroupAvatar */,
 				9CE7472A22E0CBAE00FA267A /* AppDelegate.h */,
 				9CE7472B22E0CBAE00FA267A /* AppDelegate.m */,
 				9CE7472D22E0CBAE00FA267A /* ViewController.h */,
@@ -253,16 +304,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CE7472F22E0CBAE00FA267A /* ViewController.m in Sources */,
-				9C9A9E4622F6A52500FD286B /* DCAvatarHelper.m in Sources */,
-				9C9A9E4522F6A52500FD286B /* UIView+DCGroup.m in Sources */,
+				9C3287CA239EAB0700C2BAAB /* DCNoCacheAvatarHelper.m in Sources */,
+				9C3287C6239EAB0700C2BAAB /* DCAvatarHelper.m in Sources */,
+				9C3287CE239EAB0700C2BAAB /* UIImageView+DCNoCacheGroup.m in Sources */,
+				9C3287C5239EAB0700C2BAAB /* UIView+DCGroup.m in Sources */,
 				9CD65CE922ED7D1100E30751 /* DCTestViewController.m in Sources */,
 				9CE7473A22E0CBAF00FA267A /* main.m in Sources */,
-				9C9A9E4722F6A52500FD286B /* UIImage+DCAvatar.m in Sources */,
+				9C3287CC239EAB0700C2BAAB /* UIButton+DCNoCacheGroup.m in Sources */,
+				9C3287C7239EAB0700C2BAAB /* UIImage+DCAvatar.m in Sources */,
 				EF1BB7FC22EE87340089D72C /* JPFPSStatus.m in Sources */,
-				9C9A9E4422F6A52500FD286B /* UIButton+DCGroup.m in Sources */,
-				9C9A9E4922F6A52500FD286B /* DCAvatarManager.m in Sources */,
+				9C3287CB239EAB0700C2BAAB /* DCNoCahceAvatarManager.m in Sources */,
+				9C3287C4239EAB0700C2BAAB /* UIButton+DCGroup.m in Sources */,
+				9C3287CD239EAB0700C2BAAB /* UIView+DCNoCacheGroup.m in Sources */,
+				9C3287C9239EAB0700C2BAAB /* DCAvatarManager.m in Sources */,
 				9CE7472C22E0CBAE00FA267A /* AppDelegate.m in Sources */,
-				9C9A9E4822F6A52500FD286B /* UIImageView+DCGroup.m in Sources */,
+				9C3287C8239EAB0700C2BAAB /* UIImageView+DCGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

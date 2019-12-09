@@ -57,9 +57,9 @@
 
 - (void)clean
 {
-    @weakify(self);
+    @ga_weakify(self);
     [[SDImageCache sharedImageCache] clearWithCacheType:SDImageCacheTypeAll completion:^{
-        @strongify(self);
+        @ga_strongify(self);
         [self.tableView reloadData];
     }];
 }

@@ -35,7 +35,7 @@
 
 - (void)setUpAllTypeAvatarGroupId:(NSString *)groupId Source:(NSArray *)groupSource itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
 {
-    @weakify(self);
+    @ga_weakify(self);
     __block DCGroupAvatarType avatarType = [DCAvatarManager sharedAvatar].groupAvatarType;
     
     groupSource = [DCAvatarHelper dc_getTypefMaxCount:groupSource avatarType:avatarType]; // MaxCount
@@ -49,7 +49,7 @@
     __block NSArray *groupUnitImages;
     
     dispatch_main_async_safe(^{
-        @strongify(self);
+        @ga_strongify(self);
         [self dc_setImage:groupImage setImageBlock:setImageBlock];
     });
     
@@ -70,7 +70,7 @@
     }
     
     [DCAvatarHelper dc_fetchLoadImageSource:groupSource cacheGroupImage:groupImage itemPlaceholder:placeholder completedBlock:^(NSArray <UIImage *>*unitImages, BOOL succeed) {
-        @strongify(self);
+        @ga_strongify(self);
         
         groupUnitImages = unitImages;
         
