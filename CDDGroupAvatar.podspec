@@ -13,21 +13,19 @@ s.authors      = {'RcoketsChen' => '1062749739@qq.com'}
 s.platform     = :ios, '9.0'
 s.source       = {:git => 'https://github.com/RocketsChen/CDDGroupAvatar.git', :tag => '1.5.0'}
 s.requires_arc     = true
-
 s.frameworks       = 'UIKit'
 s.default_subspec  = 'Cache'
 
-
     s.subspec 'NoCache' do |ss|
     
-      ss.source_files = 'CDDGroupAvatar' , 'CDDGroupAvatar/DCAvatar/*.{h,m}' , 'CDDGroupAvatar/CDDNoCacheGroupAvatar/*.{h,m}'
+      ss.source_files = 'CDDGroupAvatar' , 'CDDGroupAvatar/DCAvatar/*' , 'CDDGroupAvatar/CDDNoCacheGroupAvatar/*'
       
     end
     
     
     s.subspec 'Cache' do |ss|
     
-      ss.source_files = 'CDDGroupAvatar' , 'CDDGroupAvatar/DCAvatar/*.{h,m}' , 'CDDGroupAvatar/CDDCacheGroupAvatar/*.{h,m}'
+      ss.source_files = 'CDDGroupAvatar' , 'CDDGroupAvatar/DCAvatar/*' , 'CDDGroupAvatar/CDDCacheGroupAvatar/*'
       s.dependency 'SDWebImage', '~>5.0.0'
       
     end
@@ -35,8 +33,7 @@ s.default_subspec  = 'Cache'
     
     s.subspec 'Core' do |ss|
     
-      ss.source_files = 'CDDGroupAvatar' , 'CDDGroupAvatar/DCAvatar/*.{h,m}' , 'CDDGroupAvatar/CDDNoCacheGroupAvatar/*.{h,m}' , 'CDDGroupAvatar/CDDCacheGroupAvatar/*.{h,m}'
-      
+      ss.source_files = 'CDDGroupAvatar' , 'CDDGroupAvatar/DCAvatar/*' , 'CDDGroupAvatar/CDDNoCacheGroupAvatar/*' , 'CDDGroupAvatar/CDDCacheGroupAvatar/*'
       s.dependency 'SDWebImage', '~>5.0.0'
       
     end
