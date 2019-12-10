@@ -7,17 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C3287C4239EAB0700C2BAAB /* UIButton+DCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287AA239EAB0600C2BAAB /* UIButton+DCGroup.m */; };
-		9C3287C5239EAB0700C2BAAB /* UIView+DCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287AB239EAB0600C2BAAB /* UIView+DCGroup.m */; };
-		9C3287C6239EAB0700C2BAAB /* DCAvatarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287AD239EAB0600C2BAAB /* DCAvatarHelper.m */; };
-		9C3287C7239EAB0700C2BAAB /* UIImage+DCAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287AE239EAB0600C2BAAB /* UIImage+DCAvatar.m */; };
-		9C3287C8239EAB0700C2BAAB /* UIImageView+DCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287B0239EAB0600C2BAAB /* UIImageView+DCGroup.m */; };
-		9C3287C9239EAB0700C2BAAB /* DCAvatarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287B4239EAB0600C2BAAB /* DCAvatarManager.m */; };
-		9C3287CA239EAB0700C2BAAB /* DCNoCacheAvatarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287BA239EAB0600C2BAAB /* DCNoCacheAvatarHelper.m */; };
-		9C3287CB239EAB0700C2BAAB /* DCNoCahceAvatarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287BB239EAB0600C2BAAB /* DCNoCahceAvatarManager.m */; };
-		9C3287CC239EAB0700C2BAAB /* UIButton+DCNoCacheGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287BC239EAB0600C2BAAB /* UIButton+DCNoCacheGroup.m */; };
-		9C3287CD239EAB0700C2BAAB /* UIView+DCNoCacheGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287BD239EAB0600C2BAAB /* UIView+DCNoCacheGroup.m */; };
-		9C3287CE239EAB0700C2BAAB /* UIImageView+DCNoCacheGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3287BE239EAB0600C2BAAB /* UIImageView+DCNoCacheGroup.m */; };
 		9CD65CE922ED7D1100E30751 /* DCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD65CE822ED7D1100E30751 /* DCTestViewController.m */; };
 		9CE7472C22E0CBAE00FA267A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE7472B22E0CBAE00FA267A /* AppDelegate.m */; };
 		9CE7472F22E0CBAE00FA267A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE7472E22E0CBAE00FA267A /* ViewController.m */; };
@@ -27,37 +16,23 @@
 		9CE7473A22E0CBAF00FA267A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE7473922E0CBAF00FA267A /* main.m */; };
 		DB99470DC8934D6C8F91BE0C /* libPods-CDDGroupAvatar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8A03F88A745EF038F74025 /* libPods-CDDGroupAvatar.a */; };
 		EF1BB7FC22EE87340089D72C /* JPFPSStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1BB7FA22EE87340089D72C /* JPFPSStatus.m */; };
+		EFA63777239F447B0088EB89 /* UIButton+DCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA6375D239F447B0088EB89 /* UIButton+DCGroup.m */; };
+		EFA63778239F447B0088EB89 /* UIView+DCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA6375E239F447B0088EB89 /* UIView+DCGroup.m */; };
+		EFA63779239F447B0088EB89 /* DCAvatarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA63760239F447B0088EB89 /* DCAvatarHelper.m */; };
+		EFA6377A239F447B0088EB89 /* UIImage+DCAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA63761239F447B0088EB89 /* UIImage+DCAvatar.m */; };
+		EFA6377B239F447B0088EB89 /* UIImageView+DCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA63763239F447B0088EB89 /* UIImageView+DCGroup.m */; };
+		EFA6377C239F447B0088EB89 /* DCAvatarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA63767239F447B0088EB89 /* DCAvatarManager.m */; };
+		EFA6377E239F447B0088EB89 /* DCNoCahceAvatarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA63770239F447B0088EB89 /* DCNoCahceAvatarManager.m */; };
+		EFA6377F239F447B0088EB89 /* UIButton+DCNoCacheGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA63771239F447B0088EB89 /* UIButton+DCNoCacheGroup.m */; };
+		EFA63780239F447B0088EB89 /* UIView+DCNoCacheGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA63772239F447B0088EB89 /* UIView+DCNoCacheGroup.m */; };
+		EFA63781239F447B0088EB89 /* UIImageView+DCNoCacheGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA63773239F447B0088EB89 /* UIImageView+DCNoCacheGroup.m */; };
+		EFA63784239F44B30088EB89 /* DCCacheAvatarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA63782239F44B30088EB89 /* DCCacheAvatarHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E8A03F88A745EF038F74025 /* libPods-CDDGroupAvatar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CDDGroupAvatar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C64A9EBB51E58C12544E65 /* Pods-CDDGroupAvatar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDDGroupAvatar.release.xcconfig"; path = "Target Support Files/Pods-CDDGroupAvatar/Pods-CDDGroupAvatar.release.xcconfig"; sourceTree = "<group>"; };
 		6575D77F88B663C1CC5F42FF /* Pods-CDDGroupAvatar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDDGroupAvatar.debug.xcconfig"; path = "Target Support Files/Pods-CDDGroupAvatar/Pods-CDDGroupAvatar.debug.xcconfig"; sourceTree = "<group>"; };
-		9C3287A9239EAB0600C2BAAB /* UIImageView+DCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+DCGroup.h"; sourceTree = "<group>"; };
-		9C3287AA239EAB0600C2BAAB /* UIButton+DCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DCGroup.m"; sourceTree = "<group>"; };
-		9C3287AB239EAB0600C2BAAB /* UIView+DCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DCGroup.m"; sourceTree = "<group>"; };
-		9C3287AC239EAB0600C2BAAB /* DCAvatarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAvatarManager.h; sourceTree = "<group>"; };
-		9C3287AD239EAB0600C2BAAB /* DCAvatarHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAvatarHelper.m; sourceTree = "<group>"; };
-		9C3287AE239EAB0600C2BAAB /* UIImage+DCAvatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DCAvatar.m"; sourceTree = "<group>"; };
-		9C3287AF239EAB0600C2BAAB /* UIButton+DCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DCGroup.h"; sourceTree = "<group>"; };
-		9C3287B0239EAB0600C2BAAB /* UIImageView+DCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DCGroup.m"; sourceTree = "<group>"; };
-		9C3287B1239EAB0600C2BAAB /* UIView+DCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DCGroup.h"; sourceTree = "<group>"; };
-		9C3287B2239EAB0600C2BAAB /* UIImage+DCAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DCAvatar.h"; sourceTree = "<group>"; };
-		9C3287B3239EAB0600C2BAAB /* DCAvatarHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAvatarHelper.h; sourceTree = "<group>"; };
-		9C3287B4239EAB0600C2BAAB /* DCAvatarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAvatarManager.m; sourceTree = "<group>"; };
-		9C3287B5239EAB0600C2BAAB /* DCAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAvatar.h; sourceTree = "<group>"; };
-		9C3287B7239EAB0600C2BAAB /* UIView+DCNoCacheGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DCNoCacheGroup.h"; sourceTree = "<group>"; };
-		9C3287B8239EAB0600C2BAAB /* UIButton+DCNoCacheGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DCNoCacheGroup.h"; sourceTree = "<group>"; };
-		9C3287B9239EAB0600C2BAAB /* UIImageView+DCNoCacheGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+DCNoCacheGroup.h"; sourceTree = "<group>"; };
-		9C3287BA239EAB0600C2BAAB /* DCNoCacheAvatarHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNoCacheAvatarHelper.m; sourceTree = "<group>"; };
-		9C3287BB239EAB0600C2BAAB /* DCNoCahceAvatarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNoCahceAvatarManager.m; sourceTree = "<group>"; };
-		9C3287BC239EAB0600C2BAAB /* UIButton+DCNoCacheGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DCNoCacheGroup.m"; sourceTree = "<group>"; };
-		9C3287BD239EAB0600C2BAAB /* UIView+DCNoCacheGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DCNoCacheGroup.m"; sourceTree = "<group>"; };
-		9C3287BE239EAB0600C2BAAB /* UIImageView+DCNoCacheGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DCNoCacheGroup.m"; sourceTree = "<group>"; };
-		9C3287BF239EAB0600C2BAAB /* DCNoCahceAvatarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNoCahceAvatarManager.h; sourceTree = "<group>"; };
-		9C3287C0239EAB0600C2BAAB /* DCNoCacheAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNoCacheAvatar.h; sourceTree = "<group>"; };
-		9C3287C1239EAB0600C2BAAB /* DCNoCacheAvatarHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNoCacheAvatarHelper.h; sourceTree = "<group>"; };
-		9C3287C3239EAB0600C2BAAB /* DCAvatarConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAvatarConfig.h; sourceTree = "<group>"; };
 		9CD65CE722ED7D1100E30751 /* DCTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCTestViewController.h; sourceTree = "<group>"; };
 		9CD65CE822ED7D1100E30751 /* DCTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTestViewController.m; sourceTree = "<group>"; };
 		9CE7472722E0CBAE00FA267A /* CDDGroupAvatar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDDGroupAvatar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +47,31 @@
 		9CE7473922E0CBAF00FA267A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF1BB7FA22EE87340089D72C /* JPFPSStatus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPFPSStatus.m; sourceTree = "<group>"; };
 		EF1BB7FB22EE87340089D72C /* JPFPSStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPFPSStatus.h; sourceTree = "<group>"; };
+		EFA6375C239F447B0088EB89 /* UIImageView+DCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+DCGroup.h"; sourceTree = "<group>"; };
+		EFA6375D239F447B0088EB89 /* UIButton+DCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DCGroup.m"; sourceTree = "<group>"; };
+		EFA6375E239F447B0088EB89 /* UIView+DCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DCGroup.m"; sourceTree = "<group>"; };
+		EFA6375F239F447B0088EB89 /* DCAvatarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAvatarManager.h; sourceTree = "<group>"; };
+		EFA63760239F447B0088EB89 /* DCAvatarHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAvatarHelper.m; sourceTree = "<group>"; };
+		EFA63761239F447B0088EB89 /* UIImage+DCAvatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DCAvatar.m"; sourceTree = "<group>"; };
+		EFA63762239F447B0088EB89 /* UIButton+DCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DCGroup.h"; sourceTree = "<group>"; };
+		EFA63763239F447B0088EB89 /* UIImageView+DCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DCGroup.m"; sourceTree = "<group>"; };
+		EFA63764239F447B0088EB89 /* UIView+DCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DCGroup.h"; sourceTree = "<group>"; };
+		EFA63765239F447B0088EB89 /* UIImage+DCAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DCAvatar.h"; sourceTree = "<group>"; };
+		EFA63766239F447B0088EB89 /* DCAvatarHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAvatarHelper.h; sourceTree = "<group>"; };
+		EFA63767239F447B0088EB89 /* DCAvatarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAvatarManager.m; sourceTree = "<group>"; };
+		EFA63768239F447B0088EB89 /* DCAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAvatar.h; sourceTree = "<group>"; };
+		EFA6376A239F447B0088EB89 /* DCAvatarConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAvatarConfig.h; sourceTree = "<group>"; };
+		EFA6376C239F447B0088EB89 /* UIView+DCNoCacheGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DCNoCacheGroup.h"; sourceTree = "<group>"; };
+		EFA6376D239F447B0088EB89 /* UIButton+DCNoCacheGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DCNoCacheGroup.h"; sourceTree = "<group>"; };
+		EFA6376E239F447B0088EB89 /* UIImageView+DCNoCacheGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+DCNoCacheGroup.h"; sourceTree = "<group>"; };
+		EFA63770239F447B0088EB89 /* DCNoCahceAvatarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNoCahceAvatarManager.m; sourceTree = "<group>"; };
+		EFA63771239F447B0088EB89 /* UIButton+DCNoCacheGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DCNoCacheGroup.m"; sourceTree = "<group>"; };
+		EFA63772239F447B0088EB89 /* UIView+DCNoCacheGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DCNoCacheGroup.m"; sourceTree = "<group>"; };
+		EFA63773239F447B0088EB89 /* UIImageView+DCNoCacheGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DCNoCacheGroup.m"; sourceTree = "<group>"; };
+		EFA63774239F447B0088EB89 /* DCNoCahceAvatarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNoCahceAvatarManager.h; sourceTree = "<group>"; };
+		EFA63775239F447B0088EB89 /* DCNoCacheAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNoCacheAvatar.h; sourceTree = "<group>"; };
+		EFA63782239F44B30088EB89 /* DCCacheAvatarHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DCCacheAvatarHelper.m; path = /Users/snailchen/Desktop/CDDGroupAvatar/CDDGroupAvatar/CDDCacheGroupAvatar/DCCacheAvatarHelper.m; sourceTree = "<absolute>"; };
+		EFA63783239F44B30088EB89 /* DCCacheAvatarHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DCCacheAvatarHelper.h; path = /Users/snailchen/Desktop/CDDGroupAvatar/CDDGroupAvatar/CDDCacheGroupAvatar/DCCacheAvatarHelper.h; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,63 +95,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		9C3287A7239EAB0600C2BAAB /* CDDGroupAvatar */ = {
-			isa = PBXGroup;
-			children = (
-				9C3287A8239EAB0600C2BAAB /* CDDCacheGroupAvatar */,
-				9C3287B6239EAB0600C2BAAB /* CDDNoCacheGroupAvatar */,
-				9C3287C2239EAB0600C2BAAB /* DCAvatarConfig */,
-			);
-			name = CDDGroupAvatar;
-			path = ../../../CDDGroupAvatar;
-			sourceTree = "<group>";
-		};
-		9C3287A8239EAB0600C2BAAB /* CDDCacheGroupAvatar */ = {
-			isa = PBXGroup;
-			children = (
-				9C3287B5239EAB0600C2BAAB /* DCAvatar.h */,
-				9C3287B3239EAB0600C2BAAB /* DCAvatarHelper.h */,
-				9C3287AD239EAB0600C2BAAB /* DCAvatarHelper.m */,
-				9C3287AC239EAB0600C2BAAB /* DCAvatarManager.h */,
-				9C3287B4239EAB0600C2BAAB /* DCAvatarManager.m */,
-				9C3287AF239EAB0600C2BAAB /* UIButton+DCGroup.h */,
-				9C3287AA239EAB0600C2BAAB /* UIButton+DCGroup.m */,
-				9C3287B2239EAB0600C2BAAB /* UIImage+DCAvatar.h */,
-				9C3287AE239EAB0600C2BAAB /* UIImage+DCAvatar.m */,
-				9C3287A9239EAB0600C2BAAB /* UIImageView+DCGroup.h */,
-				9C3287B0239EAB0600C2BAAB /* UIImageView+DCGroup.m */,
-				9C3287B1239EAB0600C2BAAB /* UIView+DCGroup.h */,
-				9C3287AB239EAB0600C2BAAB /* UIView+DCGroup.m */,
-			);
-			path = CDDCacheGroupAvatar;
-			sourceTree = "<group>";
-		};
-		9C3287B6239EAB0600C2BAAB /* CDDNoCacheGroupAvatar */ = {
-			isa = PBXGroup;
-			children = (
-				9C3287C0239EAB0600C2BAAB /* DCNoCacheAvatar.h */,
-				9C3287C1239EAB0600C2BAAB /* DCNoCacheAvatarHelper.h */,
-				9C3287BA239EAB0600C2BAAB /* DCNoCacheAvatarHelper.m */,
-				9C3287BF239EAB0600C2BAAB /* DCNoCahceAvatarManager.h */,
-				9C3287BB239EAB0600C2BAAB /* DCNoCahceAvatarManager.m */,
-				9C3287B8239EAB0600C2BAAB /* UIButton+DCNoCacheGroup.h */,
-				9C3287BC239EAB0600C2BAAB /* UIButton+DCNoCacheGroup.m */,
-				9C3287B9239EAB0600C2BAAB /* UIImageView+DCNoCacheGroup.h */,
-				9C3287BE239EAB0600C2BAAB /* UIImageView+DCNoCacheGroup.m */,
-				9C3287B7239EAB0600C2BAAB /* UIView+DCNoCacheGroup.h */,
-				9C3287BD239EAB0600C2BAAB /* UIView+DCNoCacheGroup.m */,
-			);
-			path = CDDNoCacheGroupAvatar;
-			sourceTree = "<group>";
-		};
-		9C3287C2239EAB0600C2BAAB /* DCAvatarConfig */ = {
-			isa = PBXGroup;
-			children = (
-				9C3287C3239EAB0600C2BAAB /* DCAvatarConfig.h */,
-			);
-			path = DCAvatarConfig;
-			sourceTree = "<group>";
-		};
 		9CE7471E22E0CBAE00FA267A = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +116,7 @@
 		9CE7472922E0CBAE00FA267A /* CDDGroupAvatar */ = {
 			isa = PBXGroup;
 			children = (
-				9C3287A7239EAB0600C2BAAB /* CDDGroupAvatar */,
+				EFA6375A239F447B0088EB89 /* CDDGroupAvatar */,
 				9CE7472A22E0CBAE00FA267A /* AppDelegate.h */,
 				9CE7472B22E0CBAE00FA267A /* AppDelegate.m */,
 				9CE7472D22E0CBAE00FA267A /* ViewController.h */,
@@ -205,6 +148,63 @@
 				EF1BB7FA22EE87340089D72C /* JPFPSStatus.m */,
 			);
 			path = JPFPSStatus;
+			sourceTree = "<group>";
+		};
+		EFA6375A239F447B0088EB89 /* CDDGroupAvatar */ = {
+			isa = PBXGroup;
+			children = (
+				EFA63769239F447B0088EB89 /* DCAvatar */,
+				EFA6375B239F447B0088EB89 /* CDDCacheGroupAvatar */,
+				EFA6376B239F447B0088EB89 /* CDDNoCacheGroupAvatar */,
+			);
+			name = CDDGroupAvatar;
+			path = ../../../CDDGroupAvatar;
+			sourceTree = "<group>";
+		};
+		EFA6375B239F447B0088EB89 /* CDDCacheGroupAvatar */ = {
+			isa = PBXGroup;
+			children = (
+				EFA63768239F447B0088EB89 /* DCAvatar.h */,
+				EFA6375F239F447B0088EB89 /* DCAvatarManager.h */,
+				EFA63767239F447B0088EB89 /* DCAvatarManager.m */,
+				EFA63783239F44B30088EB89 /* DCCacheAvatarHelper.h */,
+				EFA63782239F44B30088EB89 /* DCCacheAvatarHelper.m */,
+				EFA63762239F447B0088EB89 /* UIButton+DCGroup.h */,
+				EFA6375D239F447B0088EB89 /* UIButton+DCGroup.m */,
+				EFA63765239F447B0088EB89 /* UIImage+DCAvatar.h */,
+				EFA63761239F447B0088EB89 /* UIImage+DCAvatar.m */,
+				EFA6375C239F447B0088EB89 /* UIImageView+DCGroup.h */,
+				EFA63763239F447B0088EB89 /* UIImageView+DCGroup.m */,
+				EFA63764239F447B0088EB89 /* UIView+DCGroup.h */,
+				EFA6375E239F447B0088EB89 /* UIView+DCGroup.m */,
+			);
+			path = CDDCacheGroupAvatar;
+			sourceTree = "<group>";
+		};
+		EFA63769239F447B0088EB89 /* DCAvatar */ = {
+			isa = PBXGroup;
+			children = (
+				EFA6376A239F447B0088EB89 /* DCAvatarConfig.h */,
+				EFA63766239F447B0088EB89 /* DCAvatarHelper.h */,
+				EFA63760239F447B0088EB89 /* DCAvatarHelper.m */,
+			);
+			path = DCAvatar;
+			sourceTree = "<group>";
+		};
+		EFA6376B239F447B0088EB89 /* CDDNoCacheGroupAvatar */ = {
+			isa = PBXGroup;
+			children = (
+				EFA63775239F447B0088EB89 /* DCNoCacheAvatar.h */,
+				EFA63774239F447B0088EB89 /* DCNoCahceAvatarManager.h */,
+				EFA63770239F447B0088EB89 /* DCNoCahceAvatarManager.m */,
+				EFA6376D239F447B0088EB89 /* UIButton+DCNoCacheGroup.h */,
+				EFA63771239F447B0088EB89 /* UIButton+DCNoCacheGroup.m */,
+				EFA6376E239F447B0088EB89 /* UIImageView+DCNoCacheGroup.h */,
+				EFA63773239F447B0088EB89 /* UIImageView+DCNoCacheGroup.m */,
+				EFA6376C239F447B0088EB89 /* UIView+DCNoCacheGroup.h */,
+				EFA63772239F447B0088EB89 /* UIView+DCNoCacheGroup.m */,
+			);
+			path = CDDNoCacheGroupAvatar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,21 +304,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CE7472F22E0CBAE00FA267A /* ViewController.m in Sources */,
-				9C3287CA239EAB0700C2BAAB /* DCNoCacheAvatarHelper.m in Sources */,
-				9C3287C6239EAB0700C2BAAB /* DCAvatarHelper.m in Sources */,
-				9C3287CE239EAB0700C2BAAB /* UIImageView+DCNoCacheGroup.m in Sources */,
-				9C3287C5239EAB0700C2BAAB /* UIView+DCGroup.m in Sources */,
+				EFA63779239F447B0088EB89 /* DCAvatarHelper.m in Sources */,
+				EFA63781239F447B0088EB89 /* UIImageView+DCNoCacheGroup.m in Sources */,
+				EFA63778239F447B0088EB89 /* UIView+DCGroup.m in Sources */,
 				9CD65CE922ED7D1100E30751 /* DCTestViewController.m in Sources */,
 				9CE7473A22E0CBAF00FA267A /* main.m in Sources */,
-				9C3287CC239EAB0700C2BAAB /* UIButton+DCNoCacheGroup.m in Sources */,
-				9C3287C7239EAB0700C2BAAB /* UIImage+DCAvatar.m in Sources */,
+				EFA6377F239F447B0088EB89 /* UIButton+DCNoCacheGroup.m in Sources */,
+				EFA6377A239F447B0088EB89 /* UIImage+DCAvatar.m in Sources */,
 				EF1BB7FC22EE87340089D72C /* JPFPSStatus.m in Sources */,
-				9C3287CB239EAB0700C2BAAB /* DCNoCahceAvatarManager.m in Sources */,
-				9C3287C4239EAB0700C2BAAB /* UIButton+DCGroup.m in Sources */,
-				9C3287CD239EAB0700C2BAAB /* UIView+DCNoCacheGroup.m in Sources */,
-				9C3287C9239EAB0700C2BAAB /* DCAvatarManager.m in Sources */,
+				EFA6377E239F447B0088EB89 /* DCNoCahceAvatarManager.m in Sources */,
+				EFA63777239F447B0088EB89 /* UIButton+DCGroup.m in Sources */,
+				EFA63784239F44B30088EB89 /* DCCacheAvatarHelper.m in Sources */,
+				EFA63780239F447B0088EB89 /* UIView+DCNoCacheGroup.m in Sources */,
+				EFA6377C239F447B0088EB89 /* DCAvatarManager.m in Sources */,
 				9CE7472C22E0CBAE00FA267A /* AppDelegate.m in Sources */,
-				9C3287C8239EAB0700C2BAAB /* UIImageView+DCGroup.m in Sources */,
+				EFA6377B239F447B0088EB89 /* UIImageView+DCGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

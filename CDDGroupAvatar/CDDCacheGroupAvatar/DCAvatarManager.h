@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DCAvatarConfig.h"
+#import "DCAvatar.h"
 
 #if __has_include(<SDWebImage/SDWebImage.h>)
 #import <SDWebImage/SDWebImage.h>

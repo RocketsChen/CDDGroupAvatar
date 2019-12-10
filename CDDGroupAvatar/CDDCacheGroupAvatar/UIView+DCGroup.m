@@ -9,20 +9,14 @@
 #import "UIView+DCGroup.h"
 
 #import "DCAvatarManager.h"
-#import "DCAvatarHelper.h"
+#import "DCCacheAvatarHelper.h"
 #import "UIImage+DCAvatar.h"
-#if __has_include(<SDWebImage/SDWebImage.h>)
-#import <SDWebImage/SDWebImage.h>
-#else
-#import "SDWebImage.h"
-#endif
-
 
 
 @implementation UIView (DCGroup)
 
 
-- (void)dc_setAvatarWithGroupId:(NSString *)groupId Source:(NSArray *)groupSource itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
+- (void)dc_setAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
 {
     
     [self setUpAllTypeAvatarGroupId:groupId Source:groupSource itemPlaceholder:placeholder options:options setImageBlock:setImageBlock completed:^(NSString *groupId, UIImage *groupImage, NSArray<UIImage *> *itemImageArray, NSString *cacheId) {
@@ -33,7 +27,7 @@
 }
 
 
-- (void)setUpAllTypeAvatarGroupId:(NSString *)groupId Source:(NSArray *)groupSource itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
+- (void)setUpAllTypeAvatarGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
 {
     @ga_weakify(self);
     __block DCGroupAvatarType avatarType = [DCAvatarManager sharedAvatar].groupAvatarType;
@@ -63,13 +57,13 @@
     
     if ((options == DCGroupAvatarCachedDefault) && groupImage) {
 
-        groupUnitImages = [DCAvatarHelper dc_fetchItemCacheArraySource:groupSource];
+        groupUnitImages = [DCCacheAvatarHelper dc_fetchItemCacheArraySource:groupSource];
         dispatch_main_async_safe(callCompletedBlock);
         
         return;
     }
     
-    [DCAvatarHelper dc_fetchLoadImageSource:groupSource cacheGroupImage:groupImage itemPlaceholder:placeholder completedBlock:^(NSArray <UIImage *>*unitImages, BOOL succeed) {
+    [DCCacheAvatarHelper dc_fetchLoadImageSource:groupSource cacheGroupImage:groupImage itemPlaceholder:placeholder completedBlock:^(NSArray <UIImage *>*unitImages, BOOL succeed) {
         @ga_strongify(self);
         
         groupUnitImages = unitImages;
@@ -143,7 +137,7 @@
         }
         
         groupImage = UIGraphicsGetImageFromCurrentImageContext();
-        if (![SDImageCoderHelper CGImageContainsAlpha:unitImages.firstObject.CGImage]) {
+        if (![DCAvatarHelper dc_getCGImageRefContainsAlpha:unitImages.firstObject.CGImage]) {
             groupImage = [UIImage imageWithData:UIImageJPEGRepresentation(groupImage, 1.0)];
         }
         

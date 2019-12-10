@@ -7,15 +7,13 @@
 //
 
 #import "UIView+DCNoCacheGroup.h"
-#import "DCNoCahceAvatarManager.h"
-#import "DCNoCacheAvatarHelper.h"
-#import "UIImage+DCAvatar.h"
+
 
 @implementation UIView (DCNoCacheGroup)
 
-- (void)dc_setNoCacheAvatarWithGroupId:(NSString *)groupId Source:(NSArray <UIImage *>*)groupSource itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
+- (void)dc_setNoCacheAvatarWithGroupId:(NSString *)groupId Source:(NSArray <UIImage *>*)groupSource setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
 {
-    [self setUpNoCacheAllTypeAvatarGroupId:groupId Source:groupSource itemPlaceholder:placeholder options:options setImageBlock:setImageBlock completed:^(NSString *groupId, UIImage *groupImage, NSArray<UIImage *> *itemImageArray, NSString *cacheId) {
+    [self setUpNoCacheAllTypeAvatarGroupId:groupId Source:groupSource setImageBlock:setImageBlock completed:^(NSString *groupId, UIImage *groupImage, NSArray<UIImage *> *itemImageArray, NSString *cacheId) {
         if (completedBlock) {
             completedBlock(groupId, groupImage, itemImageArray, cacheId);
         }
@@ -23,23 +21,22 @@
 }
 
 
-- (void)setUpNoCacheAllTypeAvatarGroupId:(NSString *)groupId Source:(NSArray <UIImage *>*)groupSource itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
+- (void)setUpNoCacheAllTypeAvatarGroupId:(NSString *)groupId Source:(NSArray <UIImage *>*)groupSource setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
 {
 
     DCGroupAvatarType avatarType = [DCNoCahceAvatarManager sharedAvatar].groupAvatarType;
     
-    groupSource = [DCNoCacheAvatarHelper dc_getTypefMaxCount:groupSource avatarType:avatarType]; // MaxCount
+    groupSource = [DCAvatarHelper dc_getTypefMaxCount:groupSource avatarType:avatarType]; // MaxCount
     
     UIColor *avatarBgColor = [DCNoCahceAvatarManager sharedAvatar].avatarBgColor;
     
     CGFloat distance = [DCNoCahceAvatarManager sharedAvatar].distanceBetweenAvatar;
     
-    UIImage *groupImage;
-    
+    __block UIImage *groupImage;
     GroupImageParamsBlock callCompletedBlock = ^{ // block
         if (!self) { return; }
         if (completedBlock) {
-            completedBlock(groupId, groupImage, groupSource, DCNoCacheIdMD5(groupId, groupSource));
+            completedBlock(groupId, groupImage, groupSource, DCCacheIdMD5(groupId, groupSource));
         }
     };
     
@@ -57,13 +54,13 @@
     if (avatarType != DCGroupAvatarWeiBoType) { // WeChat / QQ
         
         if (avatarType == DCGroupAvatarWeChatType) {
-            itemAvaSize = [DCNoCacheAvatarHelper dc_calculateSizeWeChatAvatarGroupCount:groupSource.count containerSize:containerSize distanceBetweenAvatar:distance];
+            itemAvaSize = [DCAvatarHelper dc_calculateSizeWeChatAvatarGroupCount:groupSource.count containerSize:containerSize distanceBetweenAvatar:distance];
         }
         
         for (NSInteger i = 0; i < groupSource.count; ++i) {
             @autoreleasepool {
                 if (avatarType == DCGroupAvatarQQType) {
-                    itemAvaSize = [DCNoCacheAvatarHelper dc_calculateSizeQQAvatarGroupCount:groupSource.count index:i containerSize:containerSize distanceBetweenAvatar:distance];
+                    itemAvaSize = [DCAvatarHelper dc_calculateSizeQQAvatarGroupCount:groupSource.count index:i containerSize:containerSize distanceBetweenAvatar:distance];
                 }
                 UIImage *avatarImage = groupSource[i];
                 
@@ -74,7 +71,7 @@
                     avatarImage = [avatarImage dc_cutImageViewSize:CGSizeMake(longEdge, longEdge) clipRect:CGRectMake((longEdge - shortEdge) * 0.5, 0, shortEdge, longEdge)];
                 }
                 
-                itemAvaPoint = [DCNoCacheAvatarHelper dc_calculatePointAvatarGroupCount:groupSource.count index:i containerSize:containerSize distanceBetweenAvatar:distance avatarType:avatarType];
+                itemAvaPoint = [DCAvatarHelper dc_calculatePointAvatarGroupCount:groupSource.count index:i containerSize:containerSize distanceBetweenAvatar:distance avatarType:avatarType];
                 
                 CGRect avaRect = CGRectMake(itemAvaPoint.x, itemAvaPoint.y, itemAvaSize.width, itemAvaSize.height);
                 
@@ -86,7 +83,7 @@
         
         __block CGFloat bordWidth = [DCNoCahceAvatarManager sharedAvatar].bordWidth;
         
-        CGFloat radius = [DCNoCacheAvatarHelper dc_calculateRadiusWeiBoAvatarGroupCount:groupSource.count containerSize:containerSize distanceBetweenAvatar:distance];
+        CGFloat radius = [DCAvatarHelper dc_calculateRadiusWeiBoAvatarGroupCount:groupSource.count containerSize:containerSize distanceBetweenAvatar:distance];
         
         for (NSInteger i = 0; i < groupSource.count; ++i) {
             @autoreleasepool {
@@ -94,7 +91,7 @@
                 
                 CGContextSaveGState(ctx);
                 
-                itemAvaPoint = [DCNoCacheAvatarHelper dc_calculateWeiBoAvatarGroupCount:groupSource.count index:i containerSize:containerSize distanceBetweenAvatar:distance];
+                itemAvaPoint = [DCAvatarHelper dc_calculateWeiBoAvatarGroupCount:groupSource.count index:i containerSize:containerSize distanceBetweenAvatar:distance];
                 
                 CGContextAddArc(ctx, itemAvaPoint.x, itemAvaPoint.y, radius, 0, M_PI * 2, 1);
                 
@@ -111,7 +108,7 @@
     }
     
     groupImage = UIGraphicsGetImageFromCurrentImageContext();
-    if (![DCNoCacheAvatarHelper dc_getCGImageRefContainsAlpha:groupSource.firstObject.CGImage]) {
+    if (![DCAvatarHelper dc_getCGImageRefContainsAlpha:groupSource.firstObject.CGImage]) {
         groupImage = [UIImage imageWithData:UIImageJPEGRepresentation(groupImage, 1.0)];
     }
     UIGraphicsEndImageContext();

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DCAvatarConfig.h"
+#import "DCNoCacheAvatar.h"
 
 
 @interface DCNoCahceAvatarManager : NSObject
@@ -23,10 +23,6 @@
 
 /* 头像背景(默认微信背景色)  */
 @property (nonatomic, strong) UIColor *avatarBgColor;
-
-
-/* 一次性设置小头像加载失败的占位图 ： 权重低于类方法中的placeholder属性 placeholderImage < (id)placeholder  */
-@property (nonatomic, strong) UIImage *placeholderImage;
 
 
 /* 微信和QQ群内小头像间距（默认值：2）  */

@@ -7,10 +7,10 @@
 //
 
 
-#import "DCAvatarManager.h"
+#import "DCAvatarConfig.h"
 
 #import "DCAvatarHelper.h"
-#import "UIImage+DCAvatar.h"
+#import "DCNoCahceAvatarManager.h"
 
 #import "UIView+DCNoCacheGroup.h"
 #import "UIImageView+DCNoCacheGroup.h"

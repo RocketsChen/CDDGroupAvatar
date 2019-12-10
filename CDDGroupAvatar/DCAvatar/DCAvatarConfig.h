@@ -56,7 +56,7 @@ typedef NS_ENUM(NSUInteger, DCGroupAvatarType) {
 
 
 /**
- 加载图片枚举
+ 加载图片枚举 * cache
  
  - SDCGroupAvatarDefaultCached: 默认：走缓存 取到返回 没有则获取最新
  - SDCGroupAvatarRefreshCached: 先读缓存再获取最新
@@ -99,14 +99,11 @@ typedef NS_ENUM(NSUInteger, DCNumberOfGroupAvatarType) {
 
 // define
 
+// * cache
 #define DCURLStr(avaStr) ([avaStr containsString:@"www."]) ? avaStr : [NSString stringWithFormat:@"%@%@",[DCAvatarManager sharedAvatar].baseUrl,avaStr]
 
 
 #define DCCacheIdMD5(groupId,groupSource) [DCAvatarHelper dc_cacheMd5:[NSString stringWithFormat:@"id%@_num%zd_lastObj%@_distance%.f_bordWidth%.f_bgColor%@",groupId,groupSource.count,groupSource.lastObject,[DCAvatarManager sharedAvatar].distanceBetweenAvatar,[DCAvatarManager sharedAvatar].bordWidth,[DCAvatarHelper dc_hexColor:[DCAvatarManager sharedAvatar].avatarBgColor]]]
-
-
-#define DCNoCacheIdMD5(groupId,groupSource) [DCNoCacheAvatarHelper dc_cacheMd5:[NSString stringWithFormat:@"id%@_num%zd_lastObj%@_distance%.f_bordWidth%.f_bgColor%@",groupId,groupSource.count,groupSource.lastObject,[DCNoCahceAvatarManager sharedAvatar].distanceBetweenAvatar,[DCNoCahceAvatarManager sharedAvatar].bordWidth,[DCNoCacheAvatarHelper dc_hexColor:[DCNoCahceAvatarManager sharedAvatar].avatarBgColor]]]
-
 
 
 #ifndef dispatch_main_async_safe

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DCAvatar.h"
 
 @interface UIImage (DCAvatar)
 

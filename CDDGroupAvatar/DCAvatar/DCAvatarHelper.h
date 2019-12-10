@@ -1,5 +1,5 @@
 //
-//  DCNoCacheAvatarHelper.h
+//  DCAvatarHelper.h
 //  DCAvatarHelper
 //
 //  Created by 陈甸甸 on 2019/7/18.
@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "DCAvatarConfig.h"
+#import "DCAvatarManager.h"
+#import "UIImage+DCAvatar.h"
 
-@interface DCNoCacheAvatarHelper : NSObject
 
-
+@interface DCAvatarHelper : NSObject
 
 /**
  计算Type_QQ头像尺寸
@@ -40,11 +41,17 @@
 + (CGPoint)dc_calculatePointAvatarGroupCount:(NSInteger)groupCount index:(NSInteger)index containerSize:(CGSize)containerSize distanceBetweenAvatar:(CGFloat)distance avatarType:(DCGroupAvatarType)groupAvatarType;
 
 
+
 /**
  获取群头像最大数组数量
  */
 + (NSArray *)dc_getTypefMaxCount:(NSArray *)groupSource avatarType:(DCGroupAvatarType)groupAvatarType;
 
+
+/**
+判断图片属性
+*/
++ (BOOL)dc_getCGImageRefContainsAlpha:(CGImageRef)imageRef;
 
 /**
  MD5加密
@@ -56,11 +63,6 @@
  颜色十六进制转换
  */
 + (NSString *)dc_hexColor:(UIColor *)color;
-
-/**
-判断图片属性
-*/
-+ (BOOL)dc_getCGImageRefContainsAlpha:(CGImageRef)imageRef;
 
 
 @end

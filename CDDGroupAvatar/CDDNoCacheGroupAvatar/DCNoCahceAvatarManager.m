@@ -31,7 +31,7 @@
 
 
 - (void)initBaseValue {
-    _placeholderImage = [UIImage new];
+    
     _bordWidth = DCWeiBoAvatarbordWidth;
     _distanceBetweenAvatar = DCDistanceBetweenAvatar;
     _avatarBgColor = [UIColor colorWithRed:238 / 255.0f  green:238 / 255.0f  blue:238 / 255.0f  alpha:1.0f];
@@ -43,10 +43,6 @@
     _avatarBgColor = avatarBgColor;
 }
 
-- (void)setPlaceholderImage:(UIImage *)placeholderImage
-{
-    _placeholderImage = placeholderImage;
-}
 
 - (void)setDistanceBetweenAvatar:(CGFloat)distanceBetweenAvatar
 {

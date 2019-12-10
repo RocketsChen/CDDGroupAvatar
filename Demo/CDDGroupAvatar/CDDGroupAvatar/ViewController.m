@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DCAvatar.h"
+#import "DCCacheAvatarHelper.h"
 #import "DCNoCacheAvatar.h"
 #import <SDWebImage.h>
 
@@ -52,6 +53,13 @@
 @property (weak, nonatomic) IBOutlet UIImageView *avImageViewW8;
 @property (weak, nonatomic) IBOutlet UIImageView *avImageViewW9;
 
+
+
+// NoCache
+@property (weak, nonatomic) IBOutlet UIImageView *ncImageViewW3;
+@property (weak, nonatomic) IBOutlet UIImageView *ncImageViewW4;
+
+
 @end
 
 @implementation ViewController
@@ -60,19 +68,16 @@
     [super viewDidLoad];
 
     [self setUpNav];
-//
-//    [self setUpDataSource];
-//
-//    [self setUpLoadData];
-//
-//    [self setUpGetAllItemAva];
-//
+
+    [self setUpDataSource];
+
+    [self setUpLoadData];
+
+    [self setUpGetAllItemAva];
 
     
-    NSArray *noCacheImageArrary = @[[UIImage imageNamed:@"noCache1"],[UIImage imageNamed:@"noCache2"],[UIImage imageNamed:@"noCache3"],[UIImage imageNamed:@"noCache4"]];
-    [self.avImageViewW5 dc_setNoCacheImageAvatarWithGroupId:@"avImageViewW5" Source:noCacheImageArrary];
-    
-    
+    [self setUpNoCache];
+
 }
 
 
@@ -96,10 +101,24 @@
     }];
 }
 
+
+
+- (void)setUpNoCache
+{
+    
+    [self.ncImageViewW3 dc_setNoCacheImageAvatarWithGroupId:@"avImageViewW3" Source:@[[UIImage imageNamed:@"noCache1"],[UIImage imageNamed:@"noCache2"],[UIImage imageNamed:@"noCache3"]] completed:^(NSString *groupId, UIImage *groupImage, NSArray<UIImage *> *itemImageArray, NSString *cacheId) {
+        NSLog(@"groupId：%@ -- 群头像：%@ 群内拼接小头像数组：%@ -- cacheId：%@",groupId, groupImage, itemImageArray , cacheId);
+    }];
+
+    [self.ncImageViewW4 dc_setNoCacheImageAvatarWithGroupId:@"avImageViewW4" Source:@[[UIImage imageNamed:@"noCache1"],[UIImage imageNamed:@"noCache2"],[UIImage imageNamed:@"noCache3"],[UIImage imageNamed:@"noCache4"]]];
+}
+
+
+
 - (void)setUpGetAllItemAva
 {
-    NSArray *itemImages = [DCAvatarHelper dc_synfetchLoadImageSource:_groupNum8 itemPlaceholder:nil];
-    [DCAvatarHelper dc_asynfetchLoadImageSource:_groupNum9 itemPlaceholder:nil completedBlock:^(NSArray<UIImage *> *unitImages) {
+    NSArray *itemImages = [DCCacheAvatarHelper dc_synfetchLoadImageSource:_groupNum8 itemPlaceholder:nil];
+    [DCCacheAvatarHelper dc_asynfetchLoadImageSource:_groupNum9 itemPlaceholder:nil completedBlock:^(NSArray<UIImage *> *unitImages) {
         
     }];
     NSLog(@"群内小头像数组%@",itemImages);
