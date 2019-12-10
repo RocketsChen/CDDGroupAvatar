@@ -20,7 +20,7 @@
 
 1：在 Podfile 中添加 pod '`CDDGroupAvatar`'，执行 pod install 或 pod update。
 
-   * 如果只需要无缓存版本：pod '`CDDGroupAvatar/NoCache`
+   * 如果只需要无缓存版本：pod '`CDDGroupAvatar/NoCache`，更多详情可以查看podspec文件
 
 * 手动导入
 
@@ -56,7 +56,7 @@
 | 1.2.0 | Add Methods；Fix Bug。| 
 | 1.3.0 | 支持ImageView和Button，初步完成框架。|
 | 1.4.0 | Add：同步获取所有小头像方法；|
-| 1.5.0 | Add：新增无缓存版本，type - NoCache，去除SDWebImage依赖。|
+| 1.5.2 | Add：新增无缓存版本，type - NoCache，去除SDWebImage依赖。|
 
 
 #### 1.4.0：
@@ -80,13 +80,14 @@
 ```
 
 
-#### 1.5.0：
+#### 1.5.2：
 
 ##### 提供NoCache版本，脱离SDWebImage依赖，用户可自行决定加载方式和缓存
 
 ```
 [self.ncImageViewW4 dc_setNoCacheImageAvatarWithGroupId:@"avImageViewW4" Source:@[[UIImage imageNamed:@"noCache1"],[UIImage imageNamed:@"noCache2"],[UIImage imageNamed:@"noCache3"],[UIImage imageNamed:@"noCache4"]]];
 ```
+
 
 
 #### 关于版本：
