@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "DCAvatarConfig.h"
-#import "DCAvatarManager.h"
-#import "UIImage+DCAvatar.h"
 
 
 @interface DCAvatarHelper : NSObject

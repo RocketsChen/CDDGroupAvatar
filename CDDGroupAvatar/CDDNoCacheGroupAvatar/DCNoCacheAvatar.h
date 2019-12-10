@@ -12,6 +12,7 @@
 #import "DCAvatarHelper.h"
 #import "DCNoCahceAvatarManager.h"
 
+#import "UIImage+DCAvatar.h"
 #import "UIView+DCNoCacheGroup.h"
 #import "UIImageView+DCNoCacheGroup.h"
 #import "UIButton+DCNoCacheGroup.h"

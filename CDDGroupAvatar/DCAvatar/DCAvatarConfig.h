@@ -105,6 +105,9 @@ typedef NS_ENUM(NSUInteger, DCNumberOfGroupAvatarType) {
 
 #define DCCacheIdMD5(groupId,groupSource) [DCAvatarHelper dc_cacheMd5:[NSString stringWithFormat:@"id%@_num%zd_lastObj%@_distance%.f_bordWidth%.f_bgColor%@",groupId,groupSource.count,groupSource.lastObject,[DCAvatarManager sharedAvatar].distanceBetweenAvatar,[DCAvatarManager sharedAvatar].bordWidth,[DCAvatarHelper dc_hexColor:[DCAvatarManager sharedAvatar].avatarBgColor]]]
 
+#define DCNoCacheIdMD5(groupId,groupSource) [DCAvatarHelper dc_cacheMd5:[NSString stringWithFormat:@"id%@_num%zd_lastObj%@_distance%.f_bordWidth%.f_bgColor%@",groupId,groupSource.count,groupSource.lastObject,[DCNoCahceAvatarManager sharedAvatar].distanceBetweenAvatar,[DCNoCahceAvatarManager sharedAvatar].bordWidth,[DCAvatarHelper dc_hexColor:[DCNoCahceAvatarManager sharedAvatar].avatarBgColor]]]
+
+
 
 #ifndef dispatch_main_async_safe
 #define dispatch_main_async_safe(block)\

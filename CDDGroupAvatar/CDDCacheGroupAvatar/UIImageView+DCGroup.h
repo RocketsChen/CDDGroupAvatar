@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DCAvatar.h"
+#import "UIView+DCGroup.h"
 
 @interface UIImageView (DCGroup)
 

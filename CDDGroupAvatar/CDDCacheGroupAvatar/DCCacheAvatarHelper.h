@@ -6,6 +6,7 @@
 //
 
 #import "DCAvatarHelper.h"
+#import "DCAvatar.h"
 
 @interface DCCacheAvatarHelper : DCAvatarHelper
 

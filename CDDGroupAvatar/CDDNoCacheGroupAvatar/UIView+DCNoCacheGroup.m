@@ -8,7 +8,6 @@
 
 #import "UIView+DCNoCacheGroup.h"
 
-
 @implementation UIView (DCNoCacheGroup)
 
 - (void)dc_setNoCacheAvatarWithGroupId:(NSString *)groupId Source:(NSArray <UIImage *>*)groupSource setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
@@ -36,7 +35,7 @@
     GroupImageParamsBlock callCompletedBlock = ^{ // block
         if (!self) { return; }
         if (completedBlock) {
-            completedBlock(groupId, groupImage, groupSource, DCCacheIdMD5(groupId, groupSource));
+            completedBlock(groupId, groupImage, groupSource, DCNoCacheIdMD5(groupId, groupSource));
         }
     };
     

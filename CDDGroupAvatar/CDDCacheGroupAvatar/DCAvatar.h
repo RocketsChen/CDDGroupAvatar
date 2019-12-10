@@ -8,6 +8,11 @@
 
 #import "DCAvatarConfig.h"
 
+
+#import "DCAvatarManager.h"
+#import "DCCacheAvatarHelper.h"
+
+#import "UIImage+DCAvatar.h"
 #import "UIView+DCGroup.h"
 #import "UIImageView+DCGroup.h"
 #import "UIButton+DCGroup.h"
