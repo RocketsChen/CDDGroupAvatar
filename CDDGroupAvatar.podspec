@@ -20,14 +20,14 @@ s.default_subspec  = 'Cache'
 
     s.subspec 'NoCache' do |ss|
     
-      ss.source_files = 'CDDGroupAvatar , 'CDDGroupAvatar/DCAvatar/*.{h,m}' , 'CDDGroupAvatar/CDDNoCacheGroupAvatar/*.{h,m}'
+      ss.source_files = 'CDDGroupAvatar' , 'CDDGroupAvatar/DCAvatar/*.{h,m}' , 'CDDGroupAvatar/CDDNoCacheGroupAvatar/*.{h,m}'
       
     end
     
     
     s.subspec 'Cache' do |ss|
     
-      ss.source_files = 'CDDGroupAvatar , 'CDDGroupAvatar/DCAvatar/*.{h,m}' , 'CDDGroupAvatar/CDDCacheGroupAvatar/*.{h,m}'
+      ss.source_files = 'CDDGroupAvatar' , 'CDDGroupAvatar/DCAvatar/*.{h,m}' , 'CDDGroupAvatar/CDDCacheGroupAvatar/*.{h,m}'
       s.dependency 'SDWebImage', '~>5.0.0'
       
     end
@@ -35,7 +35,7 @@ s.default_subspec  = 'Cache'
     
     s.subspec 'Core' do |ss|
     
-      ss.source_files = 'CDDGroupAvatar , 'CDDGroupAvatar/DCAvatar/*.{h,m}' , 'CDDGroupAvatar/CDDNoCacheGroupAvatar/*.{h,m} , 'CDDGroupAvatar/CDDCacheGroupAvatar/*.{h,m}'
+      ss.source_files = 'CDDGroupAvatar' , 'CDDGroupAvatar/DCAvatar/*.{h,m}' , 'CDDGroupAvatar/CDDNoCacheGroupAvatar/*.{h,m}' , 'CDDGroupAvatar/CDDCacheGroupAvatar/*.{h,m}'
       
       s.dependency 'SDWebImage', '~>5.0.0'
       
