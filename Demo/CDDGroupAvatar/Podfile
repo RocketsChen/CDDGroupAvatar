@@ -3,6 +3,6 @@
 
 target 'CDDGroupAvatar' do
 
-pod 'SDWebImage', '5.0'
+pod 'SDWebImage'
 
 end
