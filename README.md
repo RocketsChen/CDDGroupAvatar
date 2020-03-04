@@ -54,9 +54,10 @@
 | ------ | ------ | 
 | 1.1.0 | Start ~ 🤔| 
 | 1.2.0 | Add Methods；Fix Bug。| 
-| 1.3.0 | 支持ImageView和Button，初步完成框架。|
+| 1.3.0 | 支持ImageView和Button，初步完成框架。[博客](https://www.jianshu.com/p/f1acb0c0fb97)|
 | 1.4.0 | Add：同步获取所有小头像方法；|
-| 1.5.2 | Add：新增无缓存版本，type - NoCache，去除SDWebImage依赖。|
+| 1.5.2 | Add：新增无缓存版本，type - NoCache，去除SDWebImage依赖。[博客](https://www.jianshu.com/p/e89dbb49c0ba)|
+| 1.5.3 | Remove：SDWebImage默认版本。|
 
 
 #### 1.4.0：
@@ -91,7 +92,7 @@
 
 
 #### 关于版本：
-目前仅有OC版本，暂无Swift
+目前仅有OC版本，最近有开源Swift版本的打算，喜欢的请关注~
 
 
 #### Agreement
