@@ -167,16 +167,11 @@
     [DCAvatarManager sharedAvatar].distanceBetweenAvatar = 1;
     [DCAvatarManager sharedAvatar].groupAvatarType = DCGroupAvatarQQType;
     [self.avImageViewNQ2 dc_setImageAvatarWithGroupId:@"avImageViewNQ2" Source:_groupNum2];
-    self.avImageViewNQ2.layer.cornerRadius = self.avImageViewNQ2.frame.size.width / 2;
-    self.avImageViewNQ2.layer.masksToBounds = YES;
 
     [self.avImageViewNQ3 dc_setImageAvatarWithGroupId:@"avImageViewNQ3" Source:_groupNum3];
-    self.avImageViewNQ3.layer.cornerRadius = self.avImageViewNQ3.frame.size.width / 2;
-    self.avImageViewNQ3.layer.masksToBounds = YES;
-
+    
     [self.avImageViewNQ4 dc_setImageAvatarWithGroupId:@"avImageViewNQ4" Source:_groupNum4];
-    self.avImageViewNQ4.layer.cornerRadius = self.avImageViewNQ4.frame.size.width / 2;
-    self.avImageViewNQ4.layer.masksToBounds = YES;
+
 }
 
 

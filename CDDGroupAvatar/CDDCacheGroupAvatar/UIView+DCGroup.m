@@ -140,6 +140,10 @@
         if (![DCAvatarHelper dc_getCGImageRefContainsAlpha:unitImages.firstObject.CGImage]) {
             groupImage = [UIImage imageWithData:UIImageJPEGRepresentation(groupImage, 1.0)];
         }
+
+        if (avatarType == DCGroupAvatarQQType) {
+            groupImage = [groupImage dc_cgContextAddArcToPointImageBorderWidth:0 borderColor:UIColor.clearColor];
+        }
         
         UIGraphicsEndImageContext();
         

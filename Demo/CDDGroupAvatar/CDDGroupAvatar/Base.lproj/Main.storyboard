@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wmv-ur-Xjx">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wmv-ur-Xjx">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,78 +13,78 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PQH-pU-9PK">
-                                <rect key="frame" x="172" y="54" width="70" height="70"/>
+                                <rect key="frame" x="152.66666666666666" y="98" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="7HW-XY-kzY"/>
                                     <constraint firstAttribute="height" constant="70" id="VFS-0S-1r9"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Elm-vR-O1q">
-                                <rect key="frame" x="172" y="134" width="70" height="70"/>
+                                <rect key="frame" x="152.66666666666666" y="178" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="8gt-wQ-k6U"/>
                                     <constraint firstAttribute="height" constant="70" id="vHQ-F0-dCx"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ubq-so-Kt9">
-                                <rect key="frame" x="72" y="54" width="70" height="70"/>
+                                <rect key="frame" x="52.666666666666657" y="98" width="70" height="70"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Wb-6F-v0d">
-                                <rect key="frame" x="72" y="134" width="70" height="70"/>
+                                <rect key="frame" x="52.666666666666657" y="178" width="70" height="70"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nda-ac-GPN">
-                                <rect key="frame" x="72" y="214" width="70" height="70"/>
+                                <rect key="frame" x="52.666666666666657" y="258" width="70" height="70"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mZJ-PI-qKz">
-                                <rect key="frame" x="72" y="294" width="70" height="70"/>
+                                <rect key="frame" x="52.666666666666657" y="338" width="70" height="70"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sUu-9q-Ig9">
-                                <rect key="frame" x="72" y="374" width="70" height="70"/>
+                                <rect key="frame" x="52.666666666666657" y="418" width="70" height="70"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PWA-em-oZP">
-                                <rect key="frame" x="272" y="54" width="70" height="70"/>
+                                <rect key="frame" x="252.66666666666663" y="98" width="70" height="70"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JLb-6i-Dd3">
-                                <rect key="frame" x="272" y="134" width="70" height="70"/>
+                                <rect key="frame" x="252.66666666666663" y="178" width="70" height="70"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mmp-BS-e2T">
-                                <rect key="frame" x="72" y="454" width="70" height="70"/>
+                                <rect key="frame" x="52.666666666666657" y="498" width="70" height="70"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FdM-Ta-Nuj">
-                                <rect key="frame" x="72" y="534" width="70" height="70"/>
+                                <rect key="frame" x="52.666666666666657" y="578" width="70" height="70"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wjo-6Z-HWL">
-                                <rect key="frame" x="72" y="614" width="70" height="70"/>
+                                <rect key="frame" x="52.666666666666657" y="658" width="70" height="70"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a71-tl-XUM">
-                                <rect key="frame" x="172" y="214" width="70" height="70"/>
+                                <rect key="frame" x="152.66666666666666" y="258" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="0en-Nf-Wcn"/>
                                     <constraint firstAttribute="width" constant="70" id="rRu-xu-BF2"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CvI-wY-NO8">
-                                <rect key="frame" x="172" y="454" width="70" height="70"/>
+                                <rect key="frame" x="152.66666666666666" y="498" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="JQm-Bm-MD2"/>
                                     <constraint firstAttribute="width" constant="70" id="wRR-BU-Iti"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bz-nk-irk">
-                                <rect key="frame" x="272" y="614" width="70" height="70"/>
+                                <rect key="frame" x="252.66666666666663" y="658" width="70" height="70"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9q-9f-DqH">
-                                <rect key="frame" x="172" y="614" width="70" height="70"/>
+                                <rect key="frame" x="152.66666666666666" y="658" width="70" height="70"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dmn-WJ-xNT">
-                                <rect key="frame" x="272" y="214" width="70" height="70"/>
+                                <rect key="frame" x="252.66666666666663" y="258" width="70" height="70"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RTO-VL-IWK">
-                                <rect key="frame" x="272" y="454" width="70" height="70"/>
+                                <rect key="frame" x="252.66666666666663" y="498" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Ceu-oW-Ece"/>
                                     <constraint firstAttribute="width" constant="70" id="TSx-gV-5i0"/>
@@ -191,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849.27536231884062" y="136.95652173913044"/>
+            <point key="canvasLocation" x="1199" y="150"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rYY-Gu-C6R">
@@ -199,7 +199,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wmv-ur-Xjx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KMQ-R2-2uP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
