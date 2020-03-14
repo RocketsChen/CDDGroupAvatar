@@ -58,6 +58,7 @@
 | 1.4.0 | Add：同步获取所有小头像方法；|
 | 1.5.2 | Add：新增无缓存版本，type - NoCache，去除SDWebImage依赖。[博客](https://www.jianshu.com/p/e89dbb49c0ba)|
 | 1.5.3 | Remove：SDWebImage默认版本。|
+| 1.5.4 | Add：QQ_Type：Image切圈。|
 
 
 #### 1.4.0：

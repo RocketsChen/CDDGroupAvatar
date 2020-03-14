@@ -136,15 +136,15 @@
 		9CEA0A47239FF156006F99CF /* CDDGroupAvatar */ = {
 			isa = PBXGroup;
 			children = (
-				9CEA0A56239FF156006F99CF /* DCAvatar */,
-				9CEA0A48239FF156006F99CF /* CDDCacheGroupAvatar */,
-				9CEA0A5A239FF156006F99CF /* CDDNoCacheGroupAvatar */,
+				9CEA0A56239FF156006F99CF /* AvatarConfig */,
+				9CEA0A48239FF156006F99CF /* CacheGroupAvatar */,
+				9CEA0A5A239FF156006F99CF /* NoCacheGroupAvatar */,
 			);
 			name = CDDGroupAvatar;
 			path = ../../../CDDGroupAvatar;
 			sourceTree = "<group>";
 		};
-		9CEA0A48239FF156006F99CF /* CDDCacheGroupAvatar */ = {
+		9CEA0A48239FF156006F99CF /* CacheGroupAvatar */ = {
 			isa = PBXGroup;
 			children = (
 				9CEA0A55239FF156006F99CF /* DCAvatar.h */,
@@ -159,10 +159,10 @@
 				9CEA0A52239FF156006F99CF /* UIView+DCGroup.h */,
 				9CEA0A4B239FF156006F99CF /* UIView+DCGroup.m */,
 			);
-			path = CDDCacheGroupAvatar;
+			path = CacheGroupAvatar;
 			sourceTree = "<group>";
 		};
-		9CEA0A56239FF156006F99CF /* DCAvatar */ = {
+		9CEA0A56239FF156006F99CF /* AvatarConfig */ = {
 			isa = PBXGroup;
 			children = (
 				9CEA0A58239FF156006F99CF /* DCAvatarConfig.h */,
@@ -171,10 +171,10 @@
 				9CEA0A53239FF156006F99CF /* UIImage+DCAvatar.h */,
 				9CEA0A4E239FF156006F99CF /* UIImage+DCAvatar.m */,
 			);
-			path = DCAvatar;
+			path = AvatarConfig;
 			sourceTree = "<group>";
 		};
-		9CEA0A5A239FF156006F99CF /* CDDNoCacheGroupAvatar */ = {
+		9CEA0A5A239FF156006F99CF /* NoCacheGroupAvatar */ = {
 			isa = PBXGroup;
 			children = (
 				9CEA0A63239FF156006F99CF /* DCNoCacheAvatar.h */,
@@ -187,7 +187,7 @@
 				9CEA0A5B239FF156006F99CF /* UIView+DCNoCacheGroup.h */,
 				9CEA0A60239FF156006F99CF /* UIView+DCNoCacheGroup.m */,
 			);
-			path = CDDNoCacheGroupAvatar;
+			path = NoCacheGroupAvatar;
 			sourceTree = "<group>";
 		};
 		B28B9CB547BDE1454697972B /* Frameworks */ = {
@@ -469,6 +469,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = ChenDianDian.CDDGroupAvatar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -488,6 +489,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = ChenDianDian.CDDGroupAvatar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

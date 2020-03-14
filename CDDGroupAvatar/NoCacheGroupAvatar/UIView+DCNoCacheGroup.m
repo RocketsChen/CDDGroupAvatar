@@ -112,6 +112,10 @@
     }
     UIGraphicsEndImageContext();
     
+    if (avatarType == DCGroupAvatarQQType) {
+        groupImage = [groupImage dc_cgContextAddArcToPointImageBorderWidth:0 borderColor:UIColor.clearColor];
+    }
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         dispatch_main_async_safe(^{
             [self dc_noCachesetImage:groupImage setImageBlock:setImageBlock];
