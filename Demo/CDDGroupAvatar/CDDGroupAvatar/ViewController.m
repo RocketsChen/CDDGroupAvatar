@@ -130,12 +130,12 @@
     [DCAvatarManager sharedAvatar].baseUrl = @"http://ww1.sinaimg.cn/small/";
     [DCAvatarManager sharedAvatar].placeholderImage = [UIImage imageNamed:@"avatarholder"];
 
-    [self setUpWeChat];
-
     [self setUpWeiBo];
 
     [self setUpNewQQ];
-
+    
+    [self setUpWeChat];
+    
     [self setUpTestButton];
 }
 
@@ -219,10 +219,6 @@
     _groupNum9 = @[@"006tNc79gy1g56or92vvmj30u00u048a.jpg",@"006tNc79gy1g56mcmorgrj30rk0nm0ze.jpg",@"006tNc79gy1g57h4j42ppj30u00u00vy.jpg",@"006tNc79gy1g57hfrnhe6j30u00w01eu.jpg",@"006tNc79gy1g56or92vvmj30u00u048a.jpg",@"006tNc79gy1g57h4j42ppj30u00u00vy.jpg",@"006tNc79gy1g56or92vvmj30u00u048a.jpg",@"006tNc79gy1g57h4j42ppj30u00u00vy.jpg",@"006tNc79gy1g57h4j42ppj30u00u00vy.jpg"];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    [self setUpLoadData];
-}
 
 - (void)goToTest
 {

@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "JPFPSStatus.h"
+#if defined(DEBUG)||defined(_DEBUG)
+#import "KMCGeigerCounter.h"
+#endif
 
 @interface AppDelegate ()
 
@@ -18,9 +20,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-#if defined(DEBUG)||defined(_DEBUG)
-    [[JPFPSStatus sharedInstance] open];
+#if defined(DEBUG)||defined(_DEBUG) //仅仅在模拟器上跑测试会显示FPS
+    [KMCGeigerCounter sharedGeigerCounter].position = KMCGeigerCounterPositionMiddle;
+    [KMCGeigerCounter sharedGeigerCounter].enabled = YES;
 #endif
+    
     
     return YES;
 }
