@@ -5,12 +5,13 @@
 
 #### 这框架的初衷是想使群头像的实现尽可能的能像`SDWebImage`加载一张图片那么简单
 
+#### Swift版本：
+
+[Swift版本传送门](https://github.com/RocketsChen/CDDGroupAvatarSwift)
 
 #### 博客地址：
 
 [iOS 群头像框架 — CDDGroupAvatar](https://www.jianshu.com/p/f1acb0c0fb97)
-
-[博客](http://chendiandian.fun/2019/08/06/iOS-%E7%BE%A4%E5%A4%B4%E5%83%8F%E6%A1%86%E6%9E%B6-CDDGroupAvatar/)
 
 ![GIF](https://github.com/RocketsChen/CDDGroupAvatar/blob/master/CDDGroupAvatar.gif)
 
@@ -50,6 +51,7 @@
 ```
 
 ## 版本更新
+
 | version | note |
 | ------ | ------ | 
 | 1.1.0 | Start ~ 🤔| 
@@ -93,7 +95,13 @@
 
 
 #### 关于版本：
-目前仅有OC版本，最近有开源Swift版本的打算，喜欢的请关注~
+
+目前`iOS`和`Swift`版本均已开源，后续会继续优化完善~
+
+欢迎 Star✨
+
+
+
 
 
 #### Agreement
