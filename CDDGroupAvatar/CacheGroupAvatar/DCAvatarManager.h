@@ -15,7 +15,7 @@
 #import "SDWebImage.h"
 #endif
 
-@interface DCAvatarManager : NSObject
+@interface DCAvatarManager : NSObject <NSCopying>
 
 
 + (DCAvatarManager *)sharedAvatar;

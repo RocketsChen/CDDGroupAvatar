@@ -19,6 +19,15 @@
     return sharedInstance;
 }
 
++ (instancetype)allocWithZone:(struct _NSZone *)zone
+{
+    return [self sharedAvatar];
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return self;
+}
 
 - (instancetype)init {
     self = [super init];
@@ -60,5 +69,6 @@
 {
     _bordWidth = bordWidth;
 }
+
 
 @end
