@@ -10,7 +10,7 @@
 #import "DCNoCacheAvatar.h"
 
 
-@interface DCNoCahceAvatarManager : NSObject <NSCopying>
+@interface DCNoCahceAvatarManager : NSObject
 
 
 + (DCNoCahceAvatarManager *)sharedAvatar;
