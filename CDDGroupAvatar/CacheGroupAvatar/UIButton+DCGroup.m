@@ -31,14 +31,18 @@
 
 - (void)dc_setImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource forState:(UIControlState)state itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options completed:(GroupImageBlock)completedBlock
 {
+    [self dc_setImageAvatarWithGroupId:groupId Source:groupSource cacheKeys:nil forState:state itemPlaceholder:placeholder options:options completed:completedBlock];
+}
+
+
+- (void)dc_setImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource cacheKeys:(NSArray <NSString *>*)cacheKeys forState:(UIControlState)state itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options completed:(GroupImageBlock)completedBlock
+{
     @ga_weakify(self);
-    [self dc_setAvatarWithGroupId:groupId Source:groupSource itemPlaceholder:placeholder options:options setImageBlock:^(UIImage *setImage) {
+    [self dc_setAvatarWithGroupId:groupId Source:groupSource cacheKeys:cacheKeys itemPlaceholder:placeholder options:options setImageBlock:^(UIImage *setImage) {
         @ga_strongify(self);
         [self setImage:setImage forState:state];
     } completed:completedBlock];
 }
-
-
 
 
 
@@ -64,11 +68,17 @@
 
 - (void)dc_setBackgroundImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource forState:(UIControlState)state itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options completed:(GroupImageBlock)completedBlock
 {
+    [self dc_setBackgroundImageAvatarWithGroupId:groupId Source:groupSource cacheKeys:nil forState:state itemPlaceholder:placeholder options:options completed:completedBlock];
+}
+
+- (void)dc_setBackgroundImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource cacheKeys:(NSArray <NSString *>*)cacheKeys forState:(UIControlState)state itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options completed:(GroupImageBlock)completedBlock
+{
     @ga_weakify(self);
-    [self dc_setAvatarWithGroupId:groupId Source:groupSource itemPlaceholder:placeholder options:options setImageBlock:^(UIImage *setImage) {
+    [self dc_setAvatarWithGroupId:groupId Source:groupSource cacheKeys:cacheKeys itemPlaceholder:placeholder options:options setImageBlock:^(UIImage *setImage) {
         @ga_strongify(self);
         [self setBackgroundImage:setImage forState:state];
     } completed:completedBlock];
 }
+
 
 @end

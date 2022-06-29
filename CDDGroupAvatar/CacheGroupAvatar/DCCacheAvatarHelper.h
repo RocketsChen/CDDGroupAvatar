@@ -15,7 +15,7 @@
 /**
  批量加载群内部小头像
  */
-+ (void)dc_fetchLoadImageSource:(NSArray *)groupSource cacheGroupImage:(UIImage *)groupImage itemPlaceholder:(id)placeholder completedBlock:(FetchImageBlock)completedBlock;
++ (void)dc_fetchLoadImageSource:(NSArray *)groupSource cacheKeys:(NSArray <NSString *>*)cacheKeys cacheGroupImage:(UIImage *)groupImage itemPlaceholder:(id)placeholder completedBlock:(FetchImageBlock)completedBlock;
 
 
 

@@ -33,7 +33,7 @@
 }
 
 
-+ (void)dc_fetchLoadImageSource:(NSArray *)groupSource cacheGroupImage:(UIImage *)groupImage itemPlaceholder:(id)placeholder completedBlock:(FetchImageBlock)completedBlock{
++ (void)dc_fetchLoadImageSource:(NSArray *)groupSource cacheKeys:(NSArray <NSString *>*)cacheKeys cacheGroupImage:(UIImage *)groupImage itemPlaceholder:(id)placeholder completedBlock:(FetchImageBlock)completedBlock{
     
     NSMutableArray *groupImages = [NSMutableArray arrayWithArray:groupSource];
     
@@ -59,7 +59,13 @@
                 }
             }
             __block NSString *strImg = (NSString *)obj;
-            [[SDWebImageManager sharedManager] loadImageWithURL:[NSURL URLWithString:DCURLStr(strImg)] options:sdImageOptions progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
+            
+            NSString *cacheKey = cacheKeys[idx];
+            SDWebImageContext *imageContext = nil;
+            if (cacheKey.length > 0) {
+                imageContext = [SDWebImageContext dictionaryWithObject:cacheKey forKey:SDWebImageContextCacheKeyFilter];
+            }
+            [[SDWebImageManager sharedManager] loadImageWithURL:[NSURL URLWithString:DCURLStr(strImg)] options:sdImageOptions context:imageContext progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
                 @autoreleasepool {
                     groupSum++;
                     if (error) {
@@ -83,7 +89,7 @@
 {
     __block NSMutableArray *allItemImages;
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    [self dc_fetchLoadImageSource:groupSource cacheGroupImage:nil itemPlaceholder:placeholder completedBlock:^(NSArray<UIImage *> *unitImages, BOOL succeed) {
+    [self dc_fetchLoadImageSource:groupSource cacheKeys:nil cacheGroupImage:nil itemPlaceholder:placeholder completedBlock:^(NSArray<UIImage *> *unitImages, BOOL succeed) {
         allItemImages = [NSMutableArray arrayWithArray:unitImages];
         dispatch_semaphore_signal(semaphore);
     }];
@@ -95,7 +101,7 @@
 
 + (void)dc_asynfetchLoadImageSource:(NSArray *)groupSource itemPlaceholder:(id)placeholder completedBlock:(AsynFetchImageBlock)completedBlock
 {
-    [self dc_fetchLoadImageSource:groupSource cacheGroupImage:nil itemPlaceholder:placeholder completedBlock:^(NSArray<UIImage *> *unitImages, BOOL succeed) {
+    [self dc_fetchLoadImageSource:groupSource cacheKeys:nil cacheGroupImage:nil itemPlaceholder:placeholder completedBlock:^(NSArray<UIImage *> *unitImages, BOOL succeed) {
         dispatch_async(dispatch_get_main_queue(), ^{
             completedBlock(unitImages);
         });

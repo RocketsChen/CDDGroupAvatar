@@ -32,9 +32,13 @@
 
 - (void)dc_setImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options completed:(GroupImageBlock)completedBlock
 {
-    [self dc_setAvatarWithGroupId:groupId Source:groupSource itemPlaceholder:placeholder options:options setImageBlock:nil completed:completedBlock];
+    [self dc_setAvatarWithGroupId:groupId Source:groupSource cacheKeys:nil itemPlaceholder:placeholder options:options setImageBlock:nil completed:completedBlock];
 }
 
+- (void)dc_setImageAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource cacheKeys:(NSArray <NSString *>*)cacheKeys itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options completed:(GroupImageBlock)completedBlock
+{
+    [self dc_setAvatarWithGroupId:groupId Source:groupSource cacheKeys:cacheKeys itemPlaceholder:placeholder options:options setImageBlock:nil completed:completedBlock];
+}
 
 
 @end

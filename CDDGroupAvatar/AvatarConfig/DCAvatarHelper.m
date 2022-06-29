@@ -42,7 +42,7 @@
 {
     CGSize wholeSize = containerSize;
     CGSize avatarSize = CGSizeZero;
-
+    
     if (groupCount < DCNumberOfGroupAvatarFive) {
         avatarSize = CGSizeMake((wholeSize.width - (3 * distance)) / 2, (wholeSize.height - (3 * distance)) / 2);
     }else{

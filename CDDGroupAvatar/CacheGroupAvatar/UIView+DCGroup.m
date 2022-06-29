@@ -16,10 +16,10 @@
 @implementation UIView (DCGroup)
 
 
-- (void)dc_setAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
+- (void)dc_setAvatarWithGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource cacheKeys:(NSArray <NSString *>*)cacheKeys itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
 {
     
-    [self setUpAllTypeAvatarGroupId:groupId Source:groupSource itemPlaceholder:placeholder options:options setImageBlock:setImageBlock completed:^(NSString *groupId, UIImage *groupImage, NSArray<UIImage *> *itemImageArray, NSString *cacheId) {
+    [self setUpAllTypeAvatarGroupId:groupId Source:groupSource cacheKeys:cacheKeys itemPlaceholder:placeholder options:options setImageBlock:setImageBlock completed:^(NSString *groupId, UIImage *groupImage, NSArray<UIImage *> *itemImageArray, NSString *cacheId) {
         if (completedBlock) {
             completedBlock(groupId, groupImage, itemImageArray, cacheId);
         }
@@ -27,7 +27,7 @@
 }
 
 
-- (void)setUpAllTypeAvatarGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
+- (void)setUpAllTypeAvatarGroupId:(NSString *)groupId Source:(NSArray <NSString *>*)groupSource cacheKeys:(NSArray <NSString *>*)cacheKeys itemPlaceholder:(id)placeholder options:(DCGroupAvatarCacheType)options setImageBlock:(GroupSetImageBlock)setImageBlock completed:(GroupImageBlock)completedBlock
 {
     @ga_weakify(self);
     __block DCGroupAvatarType avatarType = [DCAvatarManager sharedAvatar].groupAvatarType;
@@ -63,7 +63,7 @@
         return;
     }
     
-    [DCCacheAvatarHelper dc_fetchLoadImageSource:groupSource cacheGroupImage:groupImage itemPlaceholder:placeholder completedBlock:^(NSArray <UIImage *>*unitImages, BOOL succeed) {
+    [DCCacheAvatarHelper dc_fetchLoadImageSource:groupSource cacheKeys:cacheKeys cacheGroupImage:groupImage itemPlaceholder:placeholder completedBlock:^(NSArray <UIImage *>*unitImages, BOOL succeed) {
         @ga_strongify(self);
         
         groupUnitImages = unitImages;
