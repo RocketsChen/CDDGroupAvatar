@@ -22,6 +22,7 @@ s.default_subspec  = 'Cache'
       
     end
     
+    
     s.subspec 'Cache' do |ss|
     
       ss.source_files = 'CDDGroupAvatar' , 'CDDGroupAvatar/AvatarConfig/*' , 'CDDGroupAvatar/CacheGroupAvatar/*'
@@ -29,11 +30,12 @@ s.default_subspec  = 'Cache'
       
     end
     
+    
     s.subspec 'Core' do |ss|
     
       ss.source_files = 'CDDGroupAvatar' , 'CDDGroupAvatar/AvatarConfig/*' , 'CDDGroupAvatar/NoCacheGroupAvatar/*' , 'CDDGroupAvatar/CacheGroupAvatar/*'
       s.dependency 'SDWebImage'
       
     end
-
+    
 end
