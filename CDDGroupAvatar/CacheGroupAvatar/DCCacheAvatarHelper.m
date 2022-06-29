@@ -63,7 +63,9 @@
             NSString *cacheKey = cacheKeys[idx];
             SDWebImageContext *imageContext = nil;
             if (cacheKey.length > 0) {
-                imageContext = [SDWebImageContext dictionaryWithObject:cacheKey forKey:SDWebImageContextCacheKeyFilter];
+                DCImageCacheKey *cache = [DCImageCacheKey new];
+                cache.cacheKey = cacheKey;
+                imageContext = [SDWebImageContext dictionaryWithObject:cache forKey:SDWebImageContextCacheKeyFilter];
             }
             [[SDWebImageManager sharedManager] loadImageWithURL:[NSURL URLWithString:DCURLStr(strImg)] options:sdImageOptions context:imageContext progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
                 @autoreleasepool {

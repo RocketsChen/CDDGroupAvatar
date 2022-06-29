@@ -16,3 +16,4 @@
 #import "UIView+DCGroup.h"
 #import "UIImageView+DCGroup.h"
 #import "UIButton+DCGroup.h"
+#import "DCImageCacheKey.h"

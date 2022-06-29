@@ -27,6 +27,7 @@
 		9CEA0A6C239FF156006F99CF /* UIButton+DCNoCacheGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA0A5F239FF156006F99CF /* UIButton+DCNoCacheGroup.m */; };
 		9CEA0A6D239FF156006F99CF /* UIView+DCNoCacheGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA0A60239FF156006F99CF /* UIView+DCNoCacheGroup.m */; };
 		9CEA0A6E239FF156006F99CF /* UIImageView+DCNoCacheGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEA0A61239FF156006F99CF /* UIImageView+DCNoCacheGroup.m */; };
+		B8D32ADC286C3BA00044EF6E /* DCImageCacheKey.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D32ADB286C3BA00044EF6E /* DCImageCacheKey.m */; };
 		DB99470DC8934D6C8F91BE0C /* libPods-CDDGroupAvatar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8A03F88A745EF038F74025 /* libPods-CDDGroupAvatar.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,8 @@
 		9CEA0A61239FF156006F99CF /* UIImageView+DCNoCacheGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DCNoCacheGroup.m"; sourceTree = "<group>"; };
 		9CEA0A62239FF156006F99CF /* DCNoCahceAvatarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNoCahceAvatarManager.h; sourceTree = "<group>"; };
 		9CEA0A63239FF156006F99CF /* DCNoCacheAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNoCacheAvatar.h; sourceTree = "<group>"; };
+		B8D32ADA286C3BA00044EF6E /* DCImageCacheKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCImageCacheKey.h; sourceTree = "<group>"; };
+		B8D32ADB286C3BA00044EF6E /* DCImageCacheKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCImageCacheKey.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +181,8 @@
 				9CEA0A50239FF156006F99CF /* UIImageView+DCGroup.m */,
 				9CEA0A52239FF156006F99CF /* UIView+DCGroup.h */,
 				9CEA0A4B239FF156006F99CF /* UIView+DCGroup.m */,
+				B8D32ADA286C3BA00044EF6E /* DCImageCacheKey.h */,
+				B8D32ADB286C3BA00044EF6E /* DCImageCacheKey.m */,
 			);
 			path = CacheGroupAvatar;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 				9CEA0A6D239FF156006F99CF /* UIView+DCNoCacheGroup.m in Sources */,
 				9CEA0A69239FF156006F99CF /* DCAvatarManager.m in Sources */,
 				9CE7472C22E0CBAE00FA267A /* AppDelegate.m in Sources */,
+				B8D32ADC286C3BA00044EF6E /* DCImageCacheKey.m in Sources */,
 				9CEA0A68239FF156006F99CF /* UIImageView+DCGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,7 +487,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.5;
+				MARKETING_VERSION = 1.5.6;
 				PRODUCT_BUNDLE_IDENTIFIER = ChenDianDian.CDDGroupAvatar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -501,7 +507,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.5;
+				MARKETING_VERSION = 1.5.6;
 				PRODUCT_BUNDLE_IDENTIFIER = ChenDianDian.CDDGroupAvatar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

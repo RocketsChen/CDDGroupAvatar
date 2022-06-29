@@ -53,7 +53,7 @@
 ## 版本更新
 
 | version | note |
-| :----: | -----: |
+| :----: | :----: |
 | 1.1.0 | Start ~ 🤔|
 | 1.2.0 | Add Methods；Fix Bug。|
 | 1.3.0 | 支持ImageView和Button，初步完成框架。[博客](https://www.jianshu.com/p/f1acb0c0fb97)|
@@ -61,7 +61,7 @@
 | 1.5.2 | Add：新增无缓存版本，type - NoCache，去除SDWebImage依赖。[博客](https://www.jianshu.com/p/e89dbb49c0ba)|
 | 1.5.3 | Remove：SDWebImage默认版本。|
 | 1.5.4 | Add：QQ_Type：Image切圈。|
-| 1.5.5 | Add：自定义缓存cache |
+| 1.5.6 | Add：自定义缓存cache |
 
 
 #### 1.4.0：
